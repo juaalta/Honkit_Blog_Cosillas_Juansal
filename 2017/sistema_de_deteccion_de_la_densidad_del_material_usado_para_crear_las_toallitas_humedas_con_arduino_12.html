@@ -1,0 +1,1304 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 1/2 · Blog Cosillas de Juansal</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.20">
+        <meta name="author" content="Juan Salvador Aleixandre Talens">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html" />
+    
+    
+    <link rel="prev" href="recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://blog.juansal.com" target="_blank" class="custom-link">Cosillas de Juansal - Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../2010/">
+            
+                <a href="../2010/">
+            
+                    
+                    2010
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../2010/presentacion.html">
+            
+                <a href="../2010/presentacion.html">
+            
+                    
+                    Presentación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../2010/migracion_de_rx_components_a_jvcl_i.html">
+            
+                <a href="../2010/migracion_de_rx_components_a_jvcl_i.html">
+            
+                    
+                    Migración de RX Components a JVCL I
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../2010/migracion_de_rx_components_a_jvcl_0.html">
+            
+                <a href="../2010/migracion_de_rx_components_a_jvcl_0.html">
+            
+                    
+                    Migración de RX Components a JVCL 0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../2010/activar_la_cuenta_root_en_ubuntu.html">
+            
+                <a href="../2010/activar_la_cuenta_root_en_ubuntu.html">
+            
+                    
+                    Activar la cuenta root en Ubuntu 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../2010/reseteo_del_id_y_de_la_mac_de_una_maquina_virtual_en_vmware.html">
+            
+                <a href="../2010/reseteo_del_id_y_de_la_mac_de_una_maquina_virtual_en_vmware.html">
+            
+                    
+                    Reseteo del ID y de la MAC de una máquina virtual en VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../2010/hacer_que_el_vmware_utilice_la_memoria_fisica_y_no_un_fichero_en_una_maquina_virtual.html">
+            
+                <a href="../2010/hacer_que_el_vmware_utilice_la_memoria_fisica_y_no_un_fichero_en_una_maquina_virtual.html">
+            
+                    
+                    Hacer que el VMware utilice la memoria física y no un fichero en una máquina virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../2010/crear_un_mirror_de_un_repositorio_de_subversion.html">
+            
+                <a href="../2010/crear_un_mirror_de_un_repositorio_de_subversion.html">
+            
+                    
+                    Crear un mirror de un repositorio de subversion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo.html">
+            
+                <a href="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo.html">
+            
+                    
+                    Lectura de ficheros INI sin secciones con Inno Setup desde código
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo_continuacion.html">
+            
+                <a href="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo_continuacion.html">
+            
+                    
+                    Lectura de ficheros INI sin secciones con Inno Setup desde código (continuación)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../2010/desactivacion_de_unity_de_las_maquinas_virtuales_de_vmware_workstation.html">
+            
+                <a href="../2010/desactivacion_de_unity_de_las_maquinas_virtuales_de_vmware_workstation.html">
+            
+                    
+                    Desactivación de Unity de las máquinas virtuales de VMware Workstation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2011/">
+            
+                <a href="../2011/">
+            
+                    
+                    2011
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2011/plugin_de_firefox.html">
+            
+                <a href="../2011/plugin_de_firefox.html">
+            
+                    
+                    Plugin de Firefox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2011/cambiar_el_propietario_y_el_grupo_al_que_pertenece_un_fichero_o_una_carpeta_en_linux.html">
+            
+                <a href="../2011/cambiar_el_propietario_y_el_grupo_al_que_pertenece_un_fichero_o_una_carpeta_en_linux.html">
+            
+                    
+                    Cambiar el propietario y el grupo al que pertenece un fichero o una carpeta en linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2011/obtener_informacion_de_la_maquina_y_del_windows_instalado_en_ella_desde_linea_de_comandos.html">
+            
+                <a href="../2011/obtener_informacion_de_la_maquina_y_del_windows_instalado_en_ella_desde_linea_de_comandos.html">
+            
+                    
+                    Obtener información de la máquina y del Windows instalado en ella desde línea de comandos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../2012/">
+            
+                <a href="../2012/">
+            
+                    
+                    2012
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../2012/conversion_de_disco_virtual_de_virtualbox_a_vmware.html">
+            
+                <a href="../2012/conversion_de_disco_virtual_de_virtualbox_a_vmware.html">
+            
+                    
+                    Conversión de disco virtual de VirtualBox a VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../2012/forzar_a_un_maquina_virtual_de_vmware_a_usar_un_adaptador_de_red_especifico.html">
+            
+                <a href="../2012/forzar_a_un_maquina_virtual_de_vmware_a_usar_un_adaptador_de_red_especifico.html">
+            
+                    
+                    Forzar a un máquina Virtual de VMware a usar un adaptador de red específico
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../2013/">
+            
+                <a href="../2013/">
+            
+                    
+                    2013
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../2013/log4net_con_c.html">
+            
+                <a href="../2013/log4net_con_c.html">
+            
+                    
+                    Log4net con C#
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../2013/log4net_con_vbnet.html">
+            
+                <a href="../2013/log4net_con_vbnet.html">
+            
+                    
+                    Log4net con VB.NET
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../2013/log4java_en_java.html">
+            
+                <a href="../2013/log4java_en_java.html">
+            
+                    
+                    Log4Java en Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../2013/como_obtener_el_id_autogenerado_al_realizar_un_insert_en_una_base_de_datos.html">
+            
+                <a href="../2013/como_obtener_el_id_autogenerado_al_realizar_un_insert_en_una_base_de_datos.html">
+            
+                    
+                    Como obtener el ID autogenerado al realizar un insert en una base de datos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../2013/mozilla_add-on_builder_posibilidades_a_la_hora_de_abrir_un_link_desde_una_entrada_de_menu.html">
+            
+                <a href="../2013/mozilla_add-on_builder_posibilidades_a_la_hora_de_abrir_un_link_desde_una_entrada_de_menu.html">
+            
+                    
+                    Mozilla Add-on builder: Posibilidades a la hora de abrir un link desde una entrada de menú
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../2013/mis_primeras_impresiones_con_ouya.html">
+            
+                <a href="../2013/mis_primeras_impresiones_con_ouya.html">
+            
+                    
+                    Mis primeras impresiones con Ouya
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../2014/">
+            
+                <a href="../2014/">
+            
+                    
+                    2014
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../2014/lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.html">
+            
+                <a href="../2014/lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.html">
+            
+                    
+                    Líneas mínimas a añadir al código del Industruino para usar las librerías m2tklib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../2014/pasos_seguidos_para_crear_un_sistema_de_backup_online_usando_el_bittorrent_y_una_cubietruck_cubieboard_3.html">
+            
+                <a href="../2014/pasos_seguidos_para_crear_un_sistema_de_backup_online_usando_el_bittorrent_y_una_cubietruck_cubieboard_3.html">
+            
+                    
+                    Pasos seguidos para crear un sistema de backup online usando el BitTorrent y una Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../2014/informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2014/informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Información sobre temperatura y discos duros en la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../2015/">
+            
+                <a href="../2015/">
+            
+                    
+                    2015
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../2015/markdown.html">
+            
+                <a href="../2015/markdown.html">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../2015/maquina_virtual_para_trabajar_con_documentos_en_markdown.html">
+            
+                <a href="../2015/maquina_virtual_para_trabajar_con_documentos_en_markdown.html">
+            
+                    
+                    Máquina virtual para trabajar con documentos en Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../2015/anadir_a_un_usuario_los_permisos_de_sudo_en_fedora.html">
+            
+                <a href="../2015/anadir_a_un_usuario_los_permisos_de_sudo_en_fedora.html">
+            
+                    
+                    Añadir a un usuario los permisos de sudo en Fedora
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../2015/instalacion_y_primeros_pasos_con_haroopress.html">
+            
+                <a href="../2015/instalacion_y_primeros_pasos_con_haroopress.html">
+            
+                    
+                    Instalación y primeros pasos con Haroopress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../2015/formato_de_datos_de_haroopress.html">
+            
+                <a href="../2015/formato_de_datos_de_haroopress.html">
+            
+                    
+                    Formato de datos de Haroopress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../2015/web_con_informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2015/web_con_informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Web con información sobre temperatura y discos duros en la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../2015/organizar_fotos_por_fecha_usando_zoner_photo_studio.html">
+            
+                <a href="../2015/organizar_fotos_por_fecha_usando_zoner_photo_studio.html">
+            
+                    
+                    Organizar fotos por fecha usando Zoner Photo Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../2015/construccion_de_maquina_recreativa_-_introduccion.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_introduccion.html">
+            
+                    
+                    Construcción de máquina recreativa - Introducción 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_construccion_del_mueble.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_construccion_del_mueble.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Construcción del mueble 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_entrada_de_alimentacion_y_ventilacion.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_entrada_de_alimentacion_y_ventilacion.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Entrada de alimentación y ventilación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_cableado.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_cableado.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Cableado
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_botones_de_encendido_y_apagado_de_la_maquina.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_botones_de_encendido_y_apagado_de_la_maquina.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Botones de encendido y apagado de la máquina
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_bezel.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_bezel.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Bezel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../2015/construccion_de_maquina_recreativa_-_el_video.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_el_video.html">
+            
+                    
+                    Construcción de máquina recreativa - El Vídeo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../2015/construccion_de_maquina_recreativa_-_los_controles.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_los_controles.html">
+            
+                    
+                    Construcción de máquina recreativa - Los Controles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="../2015/construccion_de_maquina_recreativa_-_el_sonido.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_el_sonido.html">
+            
+                    
+                    Construcción de máquina recreativa - El Sonido
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.17" data-path="../2015/construccion_de_maquina_recreativa_-_agradecimientos.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_agradecimientos.html">
+            
+                    
+                    Construcción de máquina recreativa - Agradecimientos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.18" data-path="../2015/sistema_de_apertura_de_un_escaparate_con_arduino.html">
+            
+                <a href="../2015/sistema_de_apertura_de_un_escaparate_con_arduino.html">
+            
+                    
+                    Sistema de apertura de un escaparate con arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.19" data-path="../2015/instalacion_de_las_vmware_tools_en_linux,_a_partir_de_la_version_12_de_vmware.html">
+            
+                <a href="../2015/instalacion_de_las_vmware_tools_en_linux,_a_partir_de_la_version_12_de_vmware.html">
+            
+                    
+                    Instalación de las vmware tools en linux, a partir de la versión 12 de VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../2016/">
+            
+                <a href="../2016/">
+            
+                    
+                    2016
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../2016/maquina_virtual_para_trabajar_con_documentos_en_markdown_-_nueva_version.html">
+            
+                <a href="../2016/maquina_virtual_para_trabajar_con_documentos_en_markdown_-_nueva_version.html">
+            
+                    
+                    Máquina virtual para trabajar con documentos en Markdown - Nueva versión
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../2016/opening_system_of_a_showcase_with_arduino.html">
+            
+                <a href="../2016/opening_system_of_a_showcase_with_arduino.html">
+            
+                    
+                    Opening system of a showcase with arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../2016/informacion_sobre_la_cpu_de_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2016/informacion_sobre_la_cpu_de_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Información sobre la CPU de la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../2016/maquina_virtual_de_desarrollo_para_proyectos_de_angularjs_y_nodejs.html">
+            
+                <a href="../2016/maquina_virtual_de_desarrollo_para_proyectos_de_angularjs_y_nodejs.html">
+            
+                    
+                    Máquina virtual de desarrollo para proyectos de AngularJS y NodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../2016/monitor_basado_en_angularjs_y_nodejs_para_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2016/monitor_basado_en_angularjs_y_nodejs_para_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Monitor basado en AngularJs y NodeJs para la Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2017
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="sistema_de_deteccion_de_paso_por_un_camino_con_arduino.html">
+            
+                <a href="sistema_de_deteccion_de_paso_por_un_camino_con_arduino.html">
+            
+                    
+                    Sistema de detección de paso por un camino con Arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="step_detection_system_by_a_way_with_arduino.html">
+            
+                <a href="step_detection_system_by_a_way_with_arduino.html">
+            
+                    
+                    Step detection system by a way with Arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.html">
+            
+                <a href="recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.html">
+            
+                    
+                    Recreacion del sistema de backup online usando el Resilio Sync y una Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.4" data-path="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_12.html">
+            
+                <a href="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_12.html">
+            
+                    
+                    Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 1/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html">
+            
+                <a href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html">
+            
+                    
+                    Material density detection system used to create wet wipes with Arduino 1/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_22.html">
+            
+                <a href="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_22.html">
+            
+                    
+                    Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 2/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.html">
+            
+                <a href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.html">
+            
+                    
+                    Material density detection system used to create wet wipes with Arduino 2/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../secciones_adicionales/">
+            
+                <a href="../secciones_adicionales/">
+            
+                    
+                    Secciones adicionales
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../secciones_adicionales/links_interesantes.html">
+            
+                <a href="../secciones_adicionales/links_interesantes.html">
+            
+                    
+                    Links Interesantes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../secciones_adicionales/plugins_de_firefox.html">
+            
+                <a href="../secciones_adicionales/plugins_de_firefox.html">
+            
+                    
+                    Plugins de navegadores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../secciones_adicionales/documentos_compartidos.html">
+            
+                <a href="../secciones_adicionales/documentos_compartidos.html">
+            
+                    
+                    Documentos Compartidos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../secciones_adicionales/proyectos.html">
+            
+                <a href="../secciones_adicionales/proyectos.html">
+            
+                    
+                    Proyectos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Publicado con HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 1/2</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="sistema-de-detección-de-la-densidad-del-material-usado-para-crear-las-toallitas-húmedas-con-arduino-12">Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 1/2</h1>
+<p><img src="../imagenes/medicion_densidad/Introduccion_01.jpg" alt="Barras montadas dentro del maletín de demo" title="Barras montadas dentro del maletín de demo"></p>
+<p><img src="../imagenes/medicion_densidad/Introduccion_02.jpg" alt="Barras montadas en el banco de pruebas" title="Barras montadas en el banco de pruebas"></p>
+<h2 id="introducción">Introducción</h2>
+<p>Esta aventura comenzó cuando mi amigo Fran vino a buscarme para contarme la necesidad que había detectado en una empresa y quería que le echara una mano para llevarla a buen puerto.
+Aunque al final el proyecto no se aplicó en la empresa, decidimos terminarlo, habíamos dedicado demasiado tiempo en él como para no hacerlo.</p>
+<p>El proyecto consistía en crear un sistema de detección de la densidad de un material para detectar si este cumplía con la calidad esperada.
+En caso de no cumplirla se debía de activar un relé.
+La solución que se eligiera debía de aplicarse a 9 máquinas, ser capaz de estar funcionando las 24 horas del día y realizar las tareas a la velocidad de funcionamiento de la máquina.</p>
+<p>El producto a analizar consistía en las bobinas de material usado para crear las toallitas húmedas.</p>
+<p>Los casos que debían producir la activación del relé eran los siguientes:</p>
+<ul>
+<li>Densidad del producto inferior a la esperada.</li>
+<li>Densidad del producto superior a la esperada.</li>
+<li>Cintas de unión sobre el producto.</li>
+<li>Roturas y deformaciones del producto.</li>
+</ul>
+<p><img src="../imagenes/medicion_densidad/Introduccion_03.jpg" alt="Lateral de las máquinas sobre las que se tenía que montar las barras" title="Lateral de las máquinas sobre las que se tenía que montar las barras"></p>
+<p><img src="../imagenes/medicion_densidad/Introduccion_04.jpg" alt="Detalle del lugar en el que se tenían que montar una de las barras" title="Detalle del lugar en el que se tenían que montar una de las barras"></p>
+<p><img src="../imagenes/medicion_densidad/Introduccion_05.jpg" alt="Medidas del hueco a la entrada del material en la máquina" title="Medidas del hueco a la entrada del material en la máquina"></p>
+<p><img src="../imagenes/medicion_densidad/Introduccion_06.jpg" alt="Medidas del hueco en el que se creía mejor para estar montadas las barras" title="Medidas del hueco en el que se creía mejor para estar montadas las barras"></p>
+<p>Para abordar el problema se decidió crear varias sesiones de brainstorming y de búsqueda de información para intentar encontrar las mejores soluciones a este problema.
+Las ideas que se nos ocurrieron y que se estudiaron como posibles soluciones al problema, por orden, son las siguientes:</p>
+<h3 id="usar-una-cámara-y-estudiar-el-producto-a-partir-de-la-información-recibida">Usar una cámara y estudiar el producto a partir de la información recibida.</h3>
+<p>La idea consistía en, a partir de la información obtenida de una cámara que estaba apuntando directamente al producto, usar un software de análisis de imágenes para detectar cada uno de los casos descritos antes.</p>
+<p>La detección de cintas de unión, roturas y deformaciones consistía en usar librerías de visión artificial como <a href="http://opencv.org/" target="_blank">OpenCV</a> o <a href="http://simplecv.org/" target="_blank">SimpleCV</a> para analizar las imágenes recibidas, y a partir de ciertas reglas obtener si se cumplían estos casos.
+La medición de la densidad del producto se debía de realizar analizando el color del producto al ser atravesado por una luz, con un color a estudiar.</p>
+<p>Esta idea se descartó por el alto coste de hardware necesario para realizarlo, además de por la complejidad del software que se debía crear.</p>
+<h3 id="iluminar-con-una-luz-infrarroja-y-analizar-la-luz-que-atraviesa-el-producto">Iluminar con una luz infrarroja y analizar la luz que atraviesa el producto.</h3>
+<p>La idea consistía en, iluminar con una luz infrarroja el producto y analizar la temperatura de la luz que atravesaba a éste.
+Se estudió durante un tiempo la mejor forma de realizar las mediciones, pero se descubrió que cualquier cambio mínimo en la temperatura o en la intensidad de la luz de la sala en la que se encontraban las máquinas afectaba a las mediciones.</p>
+<p>Se descartó porque la temperatura del producto puede cambiar por efectos externos y fuera de nuestro control, por tanto, complicaba sobremanera la medición de esta temperatura y obligaba a que el sistema detectara cambios de temperatura e intensidad de la luz en la sala y obligara a que el sistema se auto calibrara al detectar un mínimo cambio de uno de estos dos parámetros.</p>
+<h3 id="iluminar-con-una-luz-normal-y-analizar-la-cantidad-de-luz-que-atraviesa-al-producto">Iluminar con una luz normal y analizar la cantidad de luz que atraviesa al producto.</h3>
+<p>Esta fue la idea que se llevó a la práctica.</p>
+<p>La idea consistía en iluminar el producto por una cara y por la opuesta medir la cantidad de luz que lo traspasaba.</p>
+<p>Después de estudiar qué color usar se decidió usar el blanco, éste era del que mejor información se podía obtener y el menos afectado por tener que traspasar el producto.</p>
+<p>Mediante este sistema se podrían detectar los 4 casos que debía de cumplir el sistema:</p>
+<ul>
+<li><strong>Densidad del producto inferior a la esperada:</strong> Se detectaría si la intensidad de luz era superior a un valor límite superior de intensidad de luz.</li>
+<li><strong>Densidad del producto superior a la esperada:</strong> Se detectaría si la intensidad de luz era inferior a un valor límite inferior de intensidad de luz.</li>
+<li><strong>Cintas de unión sobre el producto:</strong> Se detectaría si la intensidad de luz era nula o casi nula.</li>
+<li><strong>Roturas y deformaciones del producto:</strong> Se detectaría si la intensidad de luz era la máxima posible o casi la máxima.</li>
+</ul>
+<h2 id="iteracionesfases-por-las-que-pasó-el-proyecto-para-llegar-a-la-solución-final">Iteraciones/Fases por las que pasó el proyecto para llegar a la solución final.</h2>
+<p>Después de decidir cómo solucionar el problema, tocó decidir cómo llevarlo a la práctica.
+La conclusión a la que se llegó fue la siguiente:</p>
+<ul>
+<li>Se debían de crear 2 barras que deberían de estar alineadas y el producto debería de pasar entre ambas.</li>
+<li>Una barra debería de iluminar el producto de forma uniforme y en la otra deberían de estar los LDR&apos;s (Light Dependent Resistor - fotorresistencia) para analizar la cantidad de luz que atraviesa a éste.</li>
+<li>Para controlar a ambas barras se usaría un Arduino. Se decidió usar el Arduino Pro Mini por su reducido tamaño.</li>
+<li>Para activar los relés y enviar los parámetros de configuración a los Arduinos que manejaban las barras se usaría otro Arduino. Se buscó por internet uno que pudiera usarse en un cuadro eléctrico o una carcasa para éste que cumpliera el mismo cometido y encontramos el <a href="https://Industruino.com/" target="_blank">Industruino</a>.</li>
+<li>La comunicación entre los Arduinos de las barras y el Industruino se realizaría por el bus I2C.</li>
+</ul>
+<p>A partir de la solución que se decidió seguir se crearon 3 iteraciones. Cada una de las iteraciones generó un prototipo diferente y que nos acercó más a la solución final del problema.</p>
+<p>Para poder realizar las pruebas se tuvo que echar mano del ingenio de mi hermano Raúl, quien nos construyó un banco para poder realizar las pruebas, éste fue modificándose según las necesidades en cada una de las pruebas que se realizaron.</p>
+<p><img src="../imagenes/medicion_densidad/Introduccion_07.jpg" alt="Banco de pruebas inicial" title="Banco de pruebas inicial"></p>
+<h3 id="iteración-1">Iteración 1</h3>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_1_01.JPG" alt="Matriz sin LEDs ni LCDs" title="Matriz sin LEDs ni LCDs"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_1_02.JPG" alt="Posicionado de los LEDs" title="Posicionado de los LEDs"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_1_03.JPG" alt="Distribución de los LCDs" title="Distribución de los LCDs"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_1_04.JPG" alt="Montaje sobre banco de pruebas" title="Montaje sobre banco de pruebas"></p>
+<p>En esta iteración se consideró crear 1 matriz de agujeros de 5x9 cuadros, en los que se introduciría un LED, pero teniendo en cuenta que los LEDs no podían estar colocados en agujeros consecutivos. De esta forma evitábamos que la luz de un LED afectara a un LDR que no fuera el suyo, además de que se intentaba evitar que la luz ambiente afectara a las medidas de luz que realizaban los LDR.</p>
+<p>Primero se empezó con unos LED de bombillas, pero no se conseguía obtener la suficiente luz para poder realizar las mediciones de forma correcta y eficiente.
+Continuamos con unos LEDs de faros de coche, pero el resultado era el mismo que con los anteriores LEDs.
+Se continuó con la búsqueda de LEDs que fueran lo suficiente potentes para tomar las mediciones de forma correcta y se encontraron unos de 10w, estos hacían muchísima luz y se tuvo que regular su intensidad, la cantidad de luz que emitían a máxima potencia era tan grande que atravesaba el producto y las mediciones se aproximaban al máximo de luz que podían medir los LDRs.</p>
+<p>Como última prueba se colocó una fila de LEDs de 10w y una fila de los LEDs de coche. Una vez realizada la prueba se llegó a la conclusión de que los LEDs a utilizar eran los de 10w, pero con su intensidad regulada. Estas barras conseguían cumplir todos los objetivos de detección, pero su tamaño era demasiado grande, por tanto, se descartaron.</p>
+<h3 id="iteración-2">Iteración 2</h3>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_2_01.JPG" alt="Interior de la barra de LEDs" title="Interior de la barra de LEDs"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_2_02.JPG" alt="Interior de la barra de LDRs" title="Interior de la barra de LDRs"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_2_03.JPG" alt="Barras - caras interiores" title="Barras - caras interiores"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_2_04.JPG" alt="Barras - caras exteriores" title="Barras - caras exteriores"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_2_05.JPG" alt="Barras - laterales" title="Barras - laterales"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_2_06.JPG" alt="Barras montadas sobre banco de pruebas" title="Barras montadas sobre banco de pruebas"></p>
+<p>En esta iteración se usaron barras rectangulares de aluminio, lo que permitió que las barras fueran más finas que las diseñadas con madera en la iteración anterior.</p>
+<p>Para evitar que unos LEDs no afectaran a los otros y los LDR no estuvieran afectados por la luz de los otros LEDs fueron todos retirados un poco hacia el interior de la barra de LEDs, de esta forma se evitaba que la luz no directa recibida por los LDRs de la barra de LDRs afectara a las mediciones.</p>
+<p>En esta iteración se tuvo el problema de que cada uno de los LEDs emitía una intensidad ligeramente diferente de luz y en algunos casos un color ligeramente diferente, esto complicaba bastante el código, ya que esto obligaba a que los LEDs y los LDRs tenían que calibrarse de forma independiente. Además de lo anterior se comprobó que las barras continuaban siendo un poco grandes para el hueco disponible.</p>
+<h3 id="iteración-3">Iteración 3</h3>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_3_01.JPG" alt="LEDs 9w definitivos" title="LEDs 9w definitivos"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_3_02.JPG" alt="Piezas usadas para las barras" title="Piezas usadas para las barras"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_3_03.JPG" alt="Pruebas de agujeros para los LEDs" title="Pruebas de agujeros para los LEDs"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_3_04.JPG" alt="Barras montadas - detalle de barra de LDRs" title="Barras montadas - detalle de barra de LDRs"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_3_05.JPG" alt="Barras montadas - detalle de barra de LEDs" title="Barras montadas - detalle de barra de LEDs"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_3_06.JPG" alt="Barras montadas sobre banco de pruebas" title="Barras montadas sobre banco de pruebas"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_3_07.JPG" alt="Detalle circuito de entrada de alimentación y Arduino de comunicaciones" title="Detalle circuito de entrada de alimentación y Arduino de comunicaciones"></p>
+<p><img src="../imagenes/medicion_densidad/PROTOTIPO_3_08.JPG" alt="Detalle circuito con Arduino de lectura de LDRs y toma de decisiones" title="Detalle circuito con Arduino de lectura de LDRs y toma de decisiones"></p>
+<p>El inicio de esta iteración comenzó con la búsqueda de unas barras más pequeñas y que permitieran reducir el tamaño total de las barras, de esta forma poder usarlas en la solución final. Como resultado de esta búsqueda se encontraron unos perfiles usados para iluminación de exteriores que nos permitían tener el tamaño deseado para las barras, además de una capacidad bastante grande de disipación de calor, los LEDs de 10w emitían una cantidad bastante grade de calor.
+Durante el proceso de búsqueda de las barras anteriores y de casualidad se encontraron unos LED COB de 6w rectangulares de 170 x 15mm, lo que permitía iluminar todo el producto de forma uniforme, de esta forma se evitaba tener que esconder los LDR para que la luz de un LED diferente al asignado afectara a la medición de este. Esto permitió que se sustituyeron todos los LEDs anteriores un uno sólo COB.</p>
+<p>El encontrar estos LEDs también permitió simplificar el proceso de calibrado, ya que a partir de entonces sólo se tenía que calibrar las medidas a tomar por cada uno de los LDRs y hacía innecesario el calibrado del LED, ya que sólo era necesario un LED COB. Además de esto simplificó el circuito necesario para el control de las barras, esto permitió que este circuito pudiera colocarse en las mismas barras y no tener que colocarlo en una caja exterior a estas.</p>
+<p>Durante esta fase se tuvo un percance y por un error en la conexión de una alimentación, se conectó al Industruino en una entrada no regulada una tensión superior a la soportada y éste se quemó, quedando inutilizable, por tanto, se decidió crear un montaje similar al Industruino, pero con un Arduino UNO, una pantalla LCD de 16x2 y 3 botones, de esta forma se pudo acabar esta fase.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.html" class="navigation navigation-prev " aria-label="Previous page: Recreacion del sistema de backup online usando el Resilio Sync y una Cubietruck (Cubieboard 3)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html" class="navigation navigation-next " aria-label="Next page: Material density detection system used to create wet wipes with Arduino 1/2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 1/2","level":"1.9.4","depth":2,"next":{"title":"Material density detection system used to create wet wipes with Arduino 1/2","level":"1.9.5","depth":2,"path":"2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.md","ref":"2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.md","articles":[]},"previous":{"title":"Recreacion del sistema de backup online usando el Resilio Sync y una Cubietruck (Cubieboard 3)","level":"1.9.3","depth":2,"path":"2017/recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.md","ref":"2017/recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Juan Salvador Aleixandre Talens","pdf":{"pageBreaksBefore":"/","toc":true,"embedFonts":false,"paperSize":"a4","margin":{"right":62,"left":62,"top":56,"bottom":56},"fontSize":12,"fontFamily":"Arial","chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blog Cosillas de Juansal","language":"es","links":{"sidebar":{"Cosillas de Juansal - Blog":"http://blog.juansal.com"}},"gitbook":"*"},"file":{"path":"2017/sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_12.md","mtime":"2021-05-03T23:24:58.261Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-05-03T23:25:17.122Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1407 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Sistema de detección de paso por un camino con Arduino · Blog Cosillas de Juansal</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.20">
+        <meta name="author" content="Juan Salvador Aleixandre Talens">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="step_detection_system_by_a_way_with_arduino.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://blog.juansal.com" target="_blank" class="custom-link">Cosillas de Juansal - Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../2010/">
+            
+                <a href="../2010/">
+            
+                    
+                    2010
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../2010/presentacion.html">
+            
+                <a href="../2010/presentacion.html">
+            
+                    
+                    Presentación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../2010/migracion_de_rx_components_a_jvcl_i.html">
+            
+                <a href="../2010/migracion_de_rx_components_a_jvcl_i.html">
+            
+                    
+                    Migración de RX Components a JVCL I
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../2010/migracion_de_rx_components_a_jvcl_0.html">
+            
+                <a href="../2010/migracion_de_rx_components_a_jvcl_0.html">
+            
+                    
+                    Migración de RX Components a JVCL 0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../2010/activar_la_cuenta_root_en_ubuntu.html">
+            
+                <a href="../2010/activar_la_cuenta_root_en_ubuntu.html">
+            
+                    
+                    Activar la cuenta root en Ubuntu 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../2010/reseteo_del_id_y_de_la_mac_de_una_maquina_virtual_en_vmware.html">
+            
+                <a href="../2010/reseteo_del_id_y_de_la_mac_de_una_maquina_virtual_en_vmware.html">
+            
+                    
+                    Reseteo del ID y de la MAC de una máquina virtual en VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../2010/hacer_que_el_vmware_utilice_la_memoria_fisica_y_no_un_fichero_en_una_maquina_virtual.html">
+            
+                <a href="../2010/hacer_que_el_vmware_utilice_la_memoria_fisica_y_no_un_fichero_en_una_maquina_virtual.html">
+            
+                    
+                    Hacer que el VMware utilice la memoria física y no un fichero en una máquina virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../2010/crear_un_mirror_de_un_repositorio_de_subversion.html">
+            
+                <a href="../2010/crear_un_mirror_de_un_repositorio_de_subversion.html">
+            
+                    
+                    Crear un mirror de un repositorio de subversion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo.html">
+            
+                <a href="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo.html">
+            
+                    
+                    Lectura de ficheros INI sin secciones con Inno Setup desde código
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo_continuacion.html">
+            
+                <a href="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo_continuacion.html">
+            
+                    
+                    Lectura de ficheros INI sin secciones con Inno Setup desde código (continuación)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../2010/desactivacion_de_unity_de_las_maquinas_virtuales_de_vmware_workstation.html">
+            
+                <a href="../2010/desactivacion_de_unity_de_las_maquinas_virtuales_de_vmware_workstation.html">
+            
+                    
+                    Desactivación de Unity de las máquinas virtuales de VMware Workstation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2011/">
+            
+                <a href="../2011/">
+            
+                    
+                    2011
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2011/plugin_de_firefox.html">
+            
+                <a href="../2011/plugin_de_firefox.html">
+            
+                    
+                    Plugin de Firefox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2011/cambiar_el_propietario_y_el_grupo_al_que_pertenece_un_fichero_o_una_carpeta_en_linux.html">
+            
+                <a href="../2011/cambiar_el_propietario_y_el_grupo_al_que_pertenece_un_fichero_o_una_carpeta_en_linux.html">
+            
+                    
+                    Cambiar el propietario y el grupo al que pertenece un fichero o una carpeta en linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2011/obtener_informacion_de_la_maquina_y_del_windows_instalado_en_ella_desde_linea_de_comandos.html">
+            
+                <a href="../2011/obtener_informacion_de_la_maquina_y_del_windows_instalado_en_ella_desde_linea_de_comandos.html">
+            
+                    
+                    Obtener información de la máquina y del Windows instalado en ella desde línea de comandos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../2012/">
+            
+                <a href="../2012/">
+            
+                    
+                    2012
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../2012/conversion_de_disco_virtual_de_virtualbox_a_vmware.html">
+            
+                <a href="../2012/conversion_de_disco_virtual_de_virtualbox_a_vmware.html">
+            
+                    
+                    Conversión de disco virtual de VirtualBox a VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../2012/forzar_a_un_maquina_virtual_de_vmware_a_usar_un_adaptador_de_red_especifico.html">
+            
+                <a href="../2012/forzar_a_un_maquina_virtual_de_vmware_a_usar_un_adaptador_de_red_especifico.html">
+            
+                    
+                    Forzar a un máquina Virtual de VMware a usar un adaptador de red específico
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../2013/">
+            
+                <a href="../2013/">
+            
+                    
+                    2013
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../2013/log4net_con_c.html">
+            
+                <a href="../2013/log4net_con_c.html">
+            
+                    
+                    Log4net con C#
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../2013/log4net_con_vbnet.html">
+            
+                <a href="../2013/log4net_con_vbnet.html">
+            
+                    
+                    Log4net con VB.NET
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../2013/log4java_en_java.html">
+            
+                <a href="../2013/log4java_en_java.html">
+            
+                    
+                    Log4Java en Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../2013/como_obtener_el_id_autogenerado_al_realizar_un_insert_en_una_base_de_datos.html">
+            
+                <a href="../2013/como_obtener_el_id_autogenerado_al_realizar_un_insert_en_una_base_de_datos.html">
+            
+                    
+                    Como obtener el ID autogenerado al realizar un insert en una base de datos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../2013/mozilla_add-on_builder_posibilidades_a_la_hora_de_abrir_un_link_desde_una_entrada_de_menu.html">
+            
+                <a href="../2013/mozilla_add-on_builder_posibilidades_a_la_hora_de_abrir_un_link_desde_una_entrada_de_menu.html">
+            
+                    
+                    Mozilla Add-on builder: Posibilidades a la hora de abrir un link desde una entrada de menú
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../2013/mis_primeras_impresiones_con_ouya.html">
+            
+                <a href="../2013/mis_primeras_impresiones_con_ouya.html">
+            
+                    
+                    Mis primeras impresiones con Ouya
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../2014/">
+            
+                <a href="../2014/">
+            
+                    
+                    2014
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../2014/lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.html">
+            
+                <a href="../2014/lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.html">
+            
+                    
+                    Líneas mínimas a añadir al código del Industruino para usar las librerías m2tklib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../2014/pasos_seguidos_para_crear_un_sistema_de_backup_online_usando_el_bittorrent_y_una_cubietruck_cubieboard_3.html">
+            
+                <a href="../2014/pasos_seguidos_para_crear_un_sistema_de_backup_online_usando_el_bittorrent_y_una_cubietruck_cubieboard_3.html">
+            
+                    
+                    Pasos seguidos para crear un sistema de backup online usando el BitTorrent y una Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../2014/informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2014/informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Información sobre temperatura y discos duros en la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../2015/">
+            
+                <a href="../2015/">
+            
+                    
+                    2015
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../2015/markdown.html">
+            
+                <a href="../2015/markdown.html">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../2015/maquina_virtual_para_trabajar_con_documentos_en_markdown.html">
+            
+                <a href="../2015/maquina_virtual_para_trabajar_con_documentos_en_markdown.html">
+            
+                    
+                    Máquina virtual para trabajar con documentos en Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../2015/anadir_a_un_usuario_los_permisos_de_sudo_en_fedora.html">
+            
+                <a href="../2015/anadir_a_un_usuario_los_permisos_de_sudo_en_fedora.html">
+            
+                    
+                    Añadir a un usuario los permisos de sudo en Fedora
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../2015/instalacion_y_primeros_pasos_con_haroopress.html">
+            
+                <a href="../2015/instalacion_y_primeros_pasos_con_haroopress.html">
+            
+                    
+                    Instalación y primeros pasos con Haroopress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../2015/formato_de_datos_de_haroopress.html">
+            
+                <a href="../2015/formato_de_datos_de_haroopress.html">
+            
+                    
+                    Formato de datos de Haroopress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../2015/web_con_informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2015/web_con_informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Web con información sobre temperatura y discos duros en la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../2015/organizar_fotos_por_fecha_usando_zoner_photo_studio.html">
+            
+                <a href="../2015/organizar_fotos_por_fecha_usando_zoner_photo_studio.html">
+            
+                    
+                    Organizar fotos por fecha usando Zoner Photo Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../2015/construccion_de_maquina_recreativa_-_introduccion.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_introduccion.html">
+            
+                    
+                    Construcción de máquina recreativa - Introducción 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_construccion_del_mueble.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_construccion_del_mueble.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Construcción del mueble 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_entrada_de_alimentacion_y_ventilacion.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_entrada_de_alimentacion_y_ventilacion.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Entrada de alimentación y ventilación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_cableado.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_cableado.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Cableado
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_botones_de_encendido_y_apagado_de_la_maquina.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_botones_de_encendido_y_apagado_de_la_maquina.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Botones de encendido y apagado de la máquina
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_bezel.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_bezel.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Bezel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../2015/construccion_de_maquina_recreativa_-_el_video.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_el_video.html">
+            
+                    
+                    Construcción de máquina recreativa - El Vídeo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../2015/construccion_de_maquina_recreativa_-_los_controles.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_los_controles.html">
+            
+                    
+                    Construcción de máquina recreativa - Los Controles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="../2015/construccion_de_maquina_recreativa_-_el_sonido.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_el_sonido.html">
+            
+                    
+                    Construcción de máquina recreativa - El Sonido
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.17" data-path="../2015/construccion_de_maquina_recreativa_-_agradecimientos.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_agradecimientos.html">
+            
+                    
+                    Construcción de máquina recreativa - Agradecimientos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.18" data-path="../2015/sistema_de_apertura_de_un_escaparate_con_arduino.html">
+            
+                <a href="../2015/sistema_de_apertura_de_un_escaparate_con_arduino.html">
+            
+                    
+                    Sistema de apertura de un escaparate con arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.19" data-path="../2015/instalacion_de_las_vmware_tools_en_linux,_a_partir_de_la_version_12_de_vmware.html">
+            
+                <a href="../2015/instalacion_de_las_vmware_tools_en_linux,_a_partir_de_la_version_12_de_vmware.html">
+            
+                    
+                    Instalación de las vmware tools en linux, a partir de la versión 12 de VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../2016/">
+            
+                <a href="../2016/">
+            
+                    
+                    2016
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../2016/maquina_virtual_para_trabajar_con_documentos_en_markdown_-_nueva_version.html">
+            
+                <a href="../2016/maquina_virtual_para_trabajar_con_documentos_en_markdown_-_nueva_version.html">
+            
+                    
+                    Máquina virtual para trabajar con documentos en Markdown - Nueva versión
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../2016/opening_system_of_a_showcase_with_arduino.html">
+            
+                <a href="../2016/opening_system_of_a_showcase_with_arduino.html">
+            
+                    
+                    Opening system of a showcase with arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../2016/informacion_sobre_la_cpu_de_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2016/informacion_sobre_la_cpu_de_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Información sobre la CPU de la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../2016/maquina_virtual_de_desarrollo_para_proyectos_de_angularjs_y_nodejs.html">
+            
+                <a href="../2016/maquina_virtual_de_desarrollo_para_proyectos_de_angularjs_y_nodejs.html">
+            
+                    
+                    Máquina virtual de desarrollo para proyectos de AngularJS y NodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../2016/monitor_basado_en_angularjs_y_nodejs_para_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2016/monitor_basado_en_angularjs_y_nodejs_para_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Monitor basado en AngularJs y NodeJs para la Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2017
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.9.1" data-path="sistema_de_deteccion_de_paso_por_un_camino_con_arduino.html">
+            
+                <a href="sistema_de_deteccion_de_paso_por_un_camino_con_arduino.html">
+            
+                    
+                    Sistema de detección de paso por un camino con Arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="step_detection_system_by_a_way_with_arduino.html">
+            
+                <a href="step_detection_system_by_a_way_with_arduino.html">
+            
+                    
+                    Step detection system by a way with Arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.html">
+            
+                <a href="recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.html">
+            
+                    
+                    Recreacion del sistema de backup online usando el Resilio Sync y una Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_12.html">
+            
+                <a href="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_12.html">
+            
+                    
+                    Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 1/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html">
+            
+                <a href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html">
+            
+                    
+                    Material density detection system used to create wet wipes with Arduino 1/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_22.html">
+            
+                <a href="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_22.html">
+            
+                    
+                    Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 2/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.html">
+            
+                <a href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.html">
+            
+                    
+                    Material density detection system used to create wet wipes with Arduino 2/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../secciones_adicionales/">
+            
+                <a href="../secciones_adicionales/">
+            
+                    
+                    Secciones adicionales
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../secciones_adicionales/links_interesantes.html">
+            
+                <a href="../secciones_adicionales/links_interesantes.html">
+            
+                    
+                    Links Interesantes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../secciones_adicionales/plugins_de_firefox.html">
+            
+                <a href="../secciones_adicionales/plugins_de_firefox.html">
+            
+                    
+                    Plugins de navegadores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../secciones_adicionales/documentos_compartidos.html">
+            
+                <a href="../secciones_adicionales/documentos_compartidos.html">
+            
+                    
+                    Documentos Compartidos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../secciones_adicionales/proyectos.html">
+            
+                <a href="../secciones_adicionales/proyectos.html">
+            
+                    
+                    Proyectos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Publicado con HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Sistema de detección de paso por un camino con Arduino</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="sistema-de-detección-de-paso-por-un-camino-con-arduino">Sistema de detección de paso por un camino con Arduino</h1>
+<h2 id="descripción">Descripción</h2>
+<p>La finalidad del proyecto es detectar el paso de coches y personas a la entrada de un huerto y avisar con una señal sonora dentro de la casa de este.
+Por esto este proyecto está compuesto por 2 módulos:</p>
+<ul>
+<li>Módulo de detección de paso, ya sea de personas o de coches.</li>
+<li>Módulo de aviso de paso.</li>
+</ul>
+<p>Los requerimientos son los siguientes:</p>
+<ul>
+<li>El módulo de detección de paso, al estar en el huerto, ha de tener una fuente de alimentación independiente, en este caso le hemos puesto una placa solar y una batería.</li>
+<li>El módulo de aviso ha de sonar cuando el módulo de detección le avise.</li>
+<li>El módulo de detección está a la entrada del huerto.</li>
+<li>El módulo de aviso está dentro de la casa.</li>
+</ul>
+<p><img src="../imagenes/detector_paso_coches/Descripcion_01.jpg" alt="Módulo de detección con placa solar" title="Módulo de detección con placa solar"></p>
+<h2 id="instrucciones">Instrucciones</h2>
+<h3 id="componentes-usados">Componentes usados</h3>
+<p>Los componentes usados han sido, por módulo:</p>
+<ul>
+<li>Módulo de detección<ul>
+<li><a href="https://www.wish.com/c/549bc514b9cb921840d9ecc5" target="_blank">Arduino Nano</a></li>
+<li><a href="http://www.ebay.es/itm/20x-Double-Side-Prototype-PCB-Universal-Circuit-Board-2x8-3x7-4x6-5x7CM-DIY-124-/170989228488?hash=item27cfc091c8:g:ZtEAAMXQkN1RyZV7" target="_blank">PCB 5x7 cm</a></li>
+<li><a href="http://www.seeedstudio.com/depot/3W-Solar-Panel-138X160-p-954.html" target="_blank">Placa solar 3W 138x160</a></li>
+<li><a href="http://es.aliexpress.com/store/product/Solar-Street-Light-battery-3-7v-6600mAh-made-by-Chinese-manufacturer/1894067_32447790091.html#extend" target="_blank">Batería 3.7 v 6600 mAh</a></li>
+<li><a href="http://www.seeedstudio.com/depot/LiPo-Rider-Pro-p-992.html" target="_blank">LiPo Rider Pro</a></li>
+<li><a href="http://www.aliexpress.com/item/BL8530-BL8531-DC-DC-Step-Up-Power-Converter-Module-DC-Boost-Converter-Board-5V-3-3V/32296844878.html" target="_blank">Módulo subida de 3.3v a 5v</a></li>
+<li><a href="http://www.ebay.es/itm/272041782549?_trksid=p2060353.m2749.l2649&amp;ssPageName=STRK%3AMEBIDX%3AIT" target="_blank">Sensor ultrasonidos mojable JSN-SR04T</a></li>
+<li><a href="http://tienda.tuelectronica.es/index.php?route=product/product&amp;product_id=57&amp;search=SKU156095" target="_blank">Módulos inalámbricos RF APC220</a></li>
+</ul>
+</li>
+<li>Módulo de aviso<ul>
+<li><a href="https://www.wish.com/c/549bc514b9cb921840d9ecc5" target="_blank">Arduino Nano</a></li>
+<li><a href="http://www.ebay.es/itm/20x-Double-Side-Prototype-PCB-Universal-Circuit-Board-2x8-3x7-4x6-5x7CM-DIY-124-/170989228488?hash=item27cfc091c8:g:ZtEAAMXQkN1RyZV7" target="_blank">PCB 5x7 cm</a></li>
+<li><a href="http://tienda.tuelectronica.es/index.php?route=product/product&amp;product_id=57&amp;search=SKU156095" target="_blank">Módulos inalámbricos RF APC220</a></li>
+<li>Buzzer pasivo / relé.</li>
+</ul>
+</li>
+</ul>
+<h3 id="montaje-del-circuito">Montaje del circuito</h3>
+<p>El esquema en Fritzing es el siguiente:</p>
+<ul>
+<li>Módulo de detección</li>
+</ul>
+<p><img src="../imagenes/detector_paso_coches/DetectorCoches_bb.png" alt="Módulo de detección" title="Módulo de detección"></p>
+<p>En este esquema no se ha añadido la parte de conexión al Lipo Rider Pro, la batería y la placa solar, por no tener los diseños para el Fritzing.</p>
+<ul>
+<li>Módulo de aviso</li>
+</ul>
+<p><img src="../imagenes/detector_paso_coches/Alarma_bb.png" alt="Módulo de aviso" title="Módulo de aviso"></p>
+<p>Imágenes del sistema montado dentro del laboratorio:</p>
+<ul>
+<li>Módulo de detección</li>
+</ul>
+<p><img src="../imagenes/detector_paso_coches/DetectorCoches_01.jpg" alt="Placa solar con Lipo Rider Pro y batería lipo conectados" title="Placa solar con Lipo Rider Pro y batería lipo conectados"></p>
+<p><img src="../imagenes/detector_paso_coches/DetectorCoches_02.jpg" alt="Módulo de detección montado sobre una breadboard con detector de ultrasonidos inicial" title="Módulo de detección montado sobre una breadboard con detector de ultrasonidos inicial"></p>
+<p><img src="../imagenes/detector_paso_coches/DetectorCoches_03.jpg" alt="Módulo de detección montado sobre una breadboard con detector de ultrasonidos final" title="Módulo de detección montado sobre una breadboard con detector de ultrasonidos final"></p>
+<p><img src="../imagenes/detector_paso_coches/DetectorCoches_04.jpg" alt="Parte superior de la PCB del módulo de detección sin componentes conectados" title="Parte superior de la PCB del módulo de detección sin componentes conectados"></p>
+<p><img src="../imagenes/detector_paso_coches/DetectorCoches_05.jpg" alt="Parte superior de la PCB del módulo de detección con componentes conectados" title="Parte superior de la PCB del módulo de detección con componentes conectados"></p>
+<p><img src="../imagenes/detector_paso_coches/DetectorCoches_06.jpg" alt="Módulo de detección dentro de su caja estanca" title="Módulo de detección dentro de su caja estanca"></p>
+<ul>
+<li>Módulo de aviso</li>
+</ul>
+<p><img src="../imagenes/detector_paso_coches/Alarma_01.jpg" alt="Módulo de aviso montado sobre una breadboard" title="Módulo de aviso montado sobre una breadboard"></p>
+<p><img src="../imagenes/detector_paso_coches/Alarma_02.jpg" alt="Parte superior de la PCB del módulo de aviso sin componentes conectados" title="Parte superior de la PCB del módulo de aviso sin componentes conectados"></p>
+<p><img src="../imagenes/detector_paso_coches/Alarma_03.jpg" alt="Parte superior de la PCB del módulo de aviso con componentes conectados" title="Parte superior de la PCB del módulo de aviso con componentes conectados"></p>
+<p><img src="../imagenes/detector_paso_coches/Alarma_04.jpg" alt="Módulo de aviso dentro de su caja estanca" title="Módulo de aviso dentro de su caja estanca"></p>
+<h3 id="software">Software</h3>
+<p>Las librerías usadas han sido:</p>
+<ul>
+<li><a href="http://freecode.com/projects/hc-sr04-ultrasonic-arduino-library" target="_blank">HCSR04Ultrasonic</a></li>
+</ul>
+<p>El código del arduino es el siguiente:</p>
+<ul>
+<li>Módulo de detección</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-comment">/*
+  Título: Modulo_RF_APC220 --&gt; Puerto serie
+*/</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Ultrasonic.h&gt;</span></span>
+
+<span class="hljs-comment">//Pins ultrasonido</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> TRIG_PIN = <span class="hljs-number">12</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> ECHO_PIN = <span class="hljs-number">13</span>;
+
+<span class="hljs-function">Ultrasonic <span class="hljs-title">ultrasonic</span><span class="hljs-params">(TRIG_PIN, ECHO_PIN)</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span>
+</span>{
+  Serial.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>); <span class="hljs-comment">// Establecemos la velocidad del puerto serie (Igual que APC220)</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span>
+</span>{
+
+  <span class="hljs-keyword">float</span> cmMsec;
+  <span class="hljs-keyword">long</span> microsec = ultrasonic.<span class="hljs-built_in">timing</span>();
+  cmMsec = ultrasonic.<span class="hljs-built_in">convert</span>(microsec, Ultrasonic::CM);
+
+  Serial.<span class="hljs-built_in">print</span>(<span class="hljs-built_in"><span class="hljs-keyword">int</span></span>(cmMsec));
+  Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;=&quot;</span>);
+
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">1000</span>);
+
+}
+</code></pre>
+<ul>
+<li>Módulo de aviso</li>
+</ul>
+<pre><code class="lang-cpp">
+<span class="hljs-comment">// create notes for our song</span>
+<span class="hljs-keyword">int</span> C = <span class="hljs-number">131</span>;
+<span class="hljs-keyword">int</span> D = <span class="hljs-number">147</span>;
+<span class="hljs-keyword">int</span> E = <span class="hljs-number">165</span>;
+<span class="hljs-keyword">int</span> F = <span class="hljs-number">175</span>;
+<span class="hljs-keyword">int</span> G = <span class="hljs-number">196</span>;
+
+<span class="hljs-comment">// create an array to hold note values</span>
+<span class="hljs-keyword">int</span> songNotes[] = {E, E, E, E, E, E, E, G, C, D, E, F, F, F, F, F, E, E, E, G, G, F, D, C};
+<span class="hljs-comment">// create another array to hold note lengths</span>
+<span class="hljs-keyword">int</span> noteDurations[] = {<span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>};
+
+byte byteRead;  <span class="hljs-comment">//Datos leídos por el puerto serie</span>
+<span class="hljs-keyword">long</span> longitud;  <span class="hljs-comment">//Longitud recibida por el puerto serie</span>
+
+<span class="hljs-keyword">long</span> longitudMaxima = <span class="hljs-number">100</span>;
+
+String inString = <span class="hljs-string">&quot;&quot;</span>;                          <span class="hljs-comment">//This string is used to store the incoming data</span>
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> pitch;                            <span class="hljs-comment">//This is the variable we will use to store the buzzers p</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span>
+</span>{
+  Serial.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+
+  longitud = <span class="hljs-number">0</span>;
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span>
+</span>{
+
+  <span class="hljs-keyword">while</span> (Serial.<span class="hljs-built_in">available</span>() &gt; <span class="hljs-number">0</span>)
+  {
+    byteRead = Serial.<span class="hljs-built_in">read</span>();
+
+    <span class="hljs-comment">//listen for numbers between 0-9</span>
+    <span class="hljs-keyword">if</span> (byteRead &gt; <span class="hljs-number">47</span> &amp;&amp; byteRead &lt; <span class="hljs-number">58</span>) {
+      <span class="hljs-comment">//number found</span>
+      longitud = (longitud * <span class="hljs-number">10</span>) + (byteRead - <span class="hljs-number">48</span>);
+    }
+
+    <span class="hljs-keyword">if</span> (byteRead == <span class="hljs-number">61</span>)
+    {
+      Serial.<span class="hljs-built_in">println</span>(longitud);
+
+      <span class="hljs-keyword">if</span> (longitud &lt;= longitudMaxima)
+      {
+        <span class="hljs-built_in">melodia</span>();
+      }
+
+      longitud = <span class="hljs-number">0</span>;
+    }
+
+  }
+
+
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">melodia</span><span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-comment">// iterate through arrays to play each note for its duration</span>
+  <span class="hljs-comment">// plays our jingle once</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">24</span>; i ++)
+  {
+    <span class="hljs-comment">// calculate note duration</span>
+    <span class="hljs-comment">// 1 second divided by note length</span>
+    <span class="hljs-comment">// adjusting value of 1000 can change tempo</span>
+    <span class="hljs-keyword">int</span> noteDuration = <span class="hljs-number">1000</span> / noteDurations[i];
+    <span class="hljs-comment">// sends tone to pin 8</span>
+    <span class="hljs-built_in">tone</span>(<span class="hljs-number">8</span>, songNotes[i], noteDuration);
+
+    <span class="hljs-comment">// pause between notes a little to hear them better</span>
+    <span class="hljs-comment">// this can also be used to adjust tempo</span>
+    <span class="hljs-keyword">int</span> pauseBetweenNotes = noteDuration * <span class="hljs-number">1.3</span>;
+    <span class="hljs-built_in">delay</span>(pauseBetweenNotes);
+    <span class="hljs-comment">// once note is done, stop playing it</span>
+    <span class="hljs-built_in">noTone</span>(<span class="hljs-number">8</span>);
+  }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 2017">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="step_detection_system_by_a_way_with_arduino.html" class="navigation navigation-next " aria-label="Next page: Step detection system by a way with Arduino">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Sistema de detección de paso por un camino con Arduino","level":"1.9.1","depth":2,"next":{"title":"Step detection system by a way with Arduino","level":"1.9.2","depth":2,"path":"2017/step_detection_system_by_a_way_with_arduino.md","ref":"2017/step_detection_system_by_a_way_with_arduino.md","articles":[]},"previous":{"title":"2017","level":"1.9","depth":1,"path":"2017/README.md","ref":"2017/README.md","articles":[{"title":"Sistema de detección de paso por un camino con Arduino","level":"1.9.1","depth":2,"path":"2017/sistema_de_deteccion_de_paso_por_un_camino_con_arduino.md","ref":"2017/sistema_de_deteccion_de_paso_por_un_camino_con_arduino.md","articles":[]},{"title":"Step detection system by a way with Arduino","level":"1.9.2","depth":2,"path":"2017/step_detection_system_by_a_way_with_arduino.md","ref":"2017/step_detection_system_by_a_way_with_arduino.md","articles":[]},{"title":"Recreacion del sistema de backup online usando el Resilio Sync y una Cubietruck (Cubieboard 3)","level":"1.9.3","depth":2,"path":"2017/recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.md","ref":"2017/recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.md","articles":[]},{"title":"Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 1/2","level":"1.9.4","depth":2,"path":"2017/sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_12.md","ref":"2017/sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_12.md","articles":[]},{"title":"Material density detection system used to create wet wipes with Arduino 1/2","level":"1.9.5","depth":2,"path":"2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.md","ref":"2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.md","articles":[]},{"title":"Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 2/2","level":"1.9.6","depth":2,"path":"2017/sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_22.md","ref":"2017/sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_22.md","articles":[]},{"title":"Material density detection system used to create wet wipes with Arduino 2/2","level":"1.9.7","depth":2,"path":"2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.md","ref":"2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Juan Salvador Aleixandre Talens","pdf":{"pageBreaksBefore":"/","toc":true,"embedFonts":false,"paperSize":"a4","margin":{"right":62,"left":62,"top":56,"bottom":56},"fontSize":12,"fontFamily":"Arial","chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blog Cosillas de Juansal","language":"es","links":{"sidebar":{"Cosillas de Juansal - Blog":"http://blog.juansal.com"}},"gitbook":"*"},"file":{"path":"2017/sistema_de_deteccion_de_paso_por_un_camino_con_arduino.md","mtime":"2021-05-03T23:24:58.261Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-05-03T23:25:17.122Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

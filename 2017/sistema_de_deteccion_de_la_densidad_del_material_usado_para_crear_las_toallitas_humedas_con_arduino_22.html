@@ -1,0 +1,1575 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 2/2 · Blog Cosillas de Juansal</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.20">
+        <meta name="author" content="Juan Salvador Aleixandre Talens">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.html" />
+    
+    
+    <link rel="prev" href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://blog.juansal.com" target="_blank" class="custom-link">Cosillas de Juansal - Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../2010/">
+            
+                <a href="../2010/">
+            
+                    
+                    2010
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../2010/presentacion.html">
+            
+                <a href="../2010/presentacion.html">
+            
+                    
+                    Presentación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../2010/migracion_de_rx_components_a_jvcl_i.html">
+            
+                <a href="../2010/migracion_de_rx_components_a_jvcl_i.html">
+            
+                    
+                    Migración de RX Components a JVCL I
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../2010/migracion_de_rx_components_a_jvcl_0.html">
+            
+                <a href="../2010/migracion_de_rx_components_a_jvcl_0.html">
+            
+                    
+                    Migración de RX Components a JVCL 0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../2010/activar_la_cuenta_root_en_ubuntu.html">
+            
+                <a href="../2010/activar_la_cuenta_root_en_ubuntu.html">
+            
+                    
+                    Activar la cuenta root en Ubuntu 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../2010/reseteo_del_id_y_de_la_mac_de_una_maquina_virtual_en_vmware.html">
+            
+                <a href="../2010/reseteo_del_id_y_de_la_mac_de_una_maquina_virtual_en_vmware.html">
+            
+                    
+                    Reseteo del ID y de la MAC de una máquina virtual en VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../2010/hacer_que_el_vmware_utilice_la_memoria_fisica_y_no_un_fichero_en_una_maquina_virtual.html">
+            
+                <a href="../2010/hacer_que_el_vmware_utilice_la_memoria_fisica_y_no_un_fichero_en_una_maquina_virtual.html">
+            
+                    
+                    Hacer que el VMware utilice la memoria física y no un fichero en una máquina virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../2010/crear_un_mirror_de_un_repositorio_de_subversion.html">
+            
+                <a href="../2010/crear_un_mirror_de_un_repositorio_de_subversion.html">
+            
+                    
+                    Crear un mirror de un repositorio de subversion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo.html">
+            
+                <a href="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo.html">
+            
+                    
+                    Lectura de ficheros INI sin secciones con Inno Setup desde código
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo_continuacion.html">
+            
+                <a href="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo_continuacion.html">
+            
+                    
+                    Lectura de ficheros INI sin secciones con Inno Setup desde código (continuación)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../2010/desactivacion_de_unity_de_las_maquinas_virtuales_de_vmware_workstation.html">
+            
+                <a href="../2010/desactivacion_de_unity_de_las_maquinas_virtuales_de_vmware_workstation.html">
+            
+                    
+                    Desactivación de Unity de las máquinas virtuales de VMware Workstation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2011/">
+            
+                <a href="../2011/">
+            
+                    
+                    2011
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2011/plugin_de_firefox.html">
+            
+                <a href="../2011/plugin_de_firefox.html">
+            
+                    
+                    Plugin de Firefox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2011/cambiar_el_propietario_y_el_grupo_al_que_pertenece_un_fichero_o_una_carpeta_en_linux.html">
+            
+                <a href="../2011/cambiar_el_propietario_y_el_grupo_al_que_pertenece_un_fichero_o_una_carpeta_en_linux.html">
+            
+                    
+                    Cambiar el propietario y el grupo al que pertenece un fichero o una carpeta en linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2011/obtener_informacion_de_la_maquina_y_del_windows_instalado_en_ella_desde_linea_de_comandos.html">
+            
+                <a href="../2011/obtener_informacion_de_la_maquina_y_del_windows_instalado_en_ella_desde_linea_de_comandos.html">
+            
+                    
+                    Obtener información de la máquina y del Windows instalado en ella desde línea de comandos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../2012/">
+            
+                <a href="../2012/">
+            
+                    
+                    2012
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../2012/conversion_de_disco_virtual_de_virtualbox_a_vmware.html">
+            
+                <a href="../2012/conversion_de_disco_virtual_de_virtualbox_a_vmware.html">
+            
+                    
+                    Conversión de disco virtual de VirtualBox a VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../2012/forzar_a_un_maquina_virtual_de_vmware_a_usar_un_adaptador_de_red_especifico.html">
+            
+                <a href="../2012/forzar_a_un_maquina_virtual_de_vmware_a_usar_un_adaptador_de_red_especifico.html">
+            
+                    
+                    Forzar a un máquina Virtual de VMware a usar un adaptador de red específico
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../2013/">
+            
+                <a href="../2013/">
+            
+                    
+                    2013
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../2013/log4net_con_c.html">
+            
+                <a href="../2013/log4net_con_c.html">
+            
+                    
+                    Log4net con C#
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../2013/log4net_con_vbnet.html">
+            
+                <a href="../2013/log4net_con_vbnet.html">
+            
+                    
+                    Log4net con VB.NET
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../2013/log4java_en_java.html">
+            
+                <a href="../2013/log4java_en_java.html">
+            
+                    
+                    Log4Java en Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../2013/como_obtener_el_id_autogenerado_al_realizar_un_insert_en_una_base_de_datos.html">
+            
+                <a href="../2013/como_obtener_el_id_autogenerado_al_realizar_un_insert_en_una_base_de_datos.html">
+            
+                    
+                    Como obtener el ID autogenerado al realizar un insert en una base de datos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../2013/mozilla_add-on_builder_posibilidades_a_la_hora_de_abrir_un_link_desde_una_entrada_de_menu.html">
+            
+                <a href="../2013/mozilla_add-on_builder_posibilidades_a_la_hora_de_abrir_un_link_desde_una_entrada_de_menu.html">
+            
+                    
+                    Mozilla Add-on builder: Posibilidades a la hora de abrir un link desde una entrada de menú
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../2013/mis_primeras_impresiones_con_ouya.html">
+            
+                <a href="../2013/mis_primeras_impresiones_con_ouya.html">
+            
+                    
+                    Mis primeras impresiones con Ouya
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../2014/">
+            
+                <a href="../2014/">
+            
+                    
+                    2014
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../2014/lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.html">
+            
+                <a href="../2014/lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.html">
+            
+                    
+                    Líneas mínimas a añadir al código del Industruino para usar las librerías m2tklib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../2014/pasos_seguidos_para_crear_un_sistema_de_backup_online_usando_el_bittorrent_y_una_cubietruck_cubieboard_3.html">
+            
+                <a href="../2014/pasos_seguidos_para_crear_un_sistema_de_backup_online_usando_el_bittorrent_y_una_cubietruck_cubieboard_3.html">
+            
+                    
+                    Pasos seguidos para crear un sistema de backup online usando el BitTorrent y una Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../2014/informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2014/informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Información sobre temperatura y discos duros en la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../2015/">
+            
+                <a href="../2015/">
+            
+                    
+                    2015
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../2015/markdown.html">
+            
+                <a href="../2015/markdown.html">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../2015/maquina_virtual_para_trabajar_con_documentos_en_markdown.html">
+            
+                <a href="../2015/maquina_virtual_para_trabajar_con_documentos_en_markdown.html">
+            
+                    
+                    Máquina virtual para trabajar con documentos en Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../2015/anadir_a_un_usuario_los_permisos_de_sudo_en_fedora.html">
+            
+                <a href="../2015/anadir_a_un_usuario_los_permisos_de_sudo_en_fedora.html">
+            
+                    
+                    Añadir a un usuario los permisos de sudo en Fedora
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../2015/instalacion_y_primeros_pasos_con_haroopress.html">
+            
+                <a href="../2015/instalacion_y_primeros_pasos_con_haroopress.html">
+            
+                    
+                    Instalación y primeros pasos con Haroopress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../2015/formato_de_datos_de_haroopress.html">
+            
+                <a href="../2015/formato_de_datos_de_haroopress.html">
+            
+                    
+                    Formato de datos de Haroopress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../2015/web_con_informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2015/web_con_informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Web con información sobre temperatura y discos duros en la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../2015/organizar_fotos_por_fecha_usando_zoner_photo_studio.html">
+            
+                <a href="../2015/organizar_fotos_por_fecha_usando_zoner_photo_studio.html">
+            
+                    
+                    Organizar fotos por fecha usando Zoner Photo Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../2015/construccion_de_maquina_recreativa_-_introduccion.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_introduccion.html">
+            
+                    
+                    Construcción de máquina recreativa - Introducción 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_construccion_del_mueble.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_construccion_del_mueble.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Construcción del mueble 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_entrada_de_alimentacion_y_ventilacion.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_entrada_de_alimentacion_y_ventilacion.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Entrada de alimentación y ventilación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_cableado.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_cableado.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Cableado
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_botones_de_encendido_y_apagado_de_la_maquina.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_botones_de_encendido_y_apagado_de_la_maquina.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Botones de encendido y apagado de la máquina
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_bezel.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_bezel.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Bezel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../2015/construccion_de_maquina_recreativa_-_el_video.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_el_video.html">
+            
+                    
+                    Construcción de máquina recreativa - El Vídeo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../2015/construccion_de_maquina_recreativa_-_los_controles.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_los_controles.html">
+            
+                    
+                    Construcción de máquina recreativa - Los Controles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="../2015/construccion_de_maquina_recreativa_-_el_sonido.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_el_sonido.html">
+            
+                    
+                    Construcción de máquina recreativa - El Sonido
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.17" data-path="../2015/construccion_de_maquina_recreativa_-_agradecimientos.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_agradecimientos.html">
+            
+                    
+                    Construcción de máquina recreativa - Agradecimientos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.18" data-path="../2015/sistema_de_apertura_de_un_escaparate_con_arduino.html">
+            
+                <a href="../2015/sistema_de_apertura_de_un_escaparate_con_arduino.html">
+            
+                    
+                    Sistema de apertura de un escaparate con arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.19" data-path="../2015/instalacion_de_las_vmware_tools_en_linux,_a_partir_de_la_version_12_de_vmware.html">
+            
+                <a href="../2015/instalacion_de_las_vmware_tools_en_linux,_a_partir_de_la_version_12_de_vmware.html">
+            
+                    
+                    Instalación de las vmware tools en linux, a partir de la versión 12 de VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../2016/">
+            
+                <a href="../2016/">
+            
+                    
+                    2016
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../2016/maquina_virtual_para_trabajar_con_documentos_en_markdown_-_nueva_version.html">
+            
+                <a href="../2016/maquina_virtual_para_trabajar_con_documentos_en_markdown_-_nueva_version.html">
+            
+                    
+                    Máquina virtual para trabajar con documentos en Markdown - Nueva versión
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../2016/opening_system_of_a_showcase_with_arduino.html">
+            
+                <a href="../2016/opening_system_of_a_showcase_with_arduino.html">
+            
+                    
+                    Opening system of a showcase with arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../2016/informacion_sobre_la_cpu_de_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2016/informacion_sobre_la_cpu_de_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Información sobre la CPU de la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../2016/maquina_virtual_de_desarrollo_para_proyectos_de_angularjs_y_nodejs.html">
+            
+                <a href="../2016/maquina_virtual_de_desarrollo_para_proyectos_de_angularjs_y_nodejs.html">
+            
+                    
+                    Máquina virtual de desarrollo para proyectos de AngularJS y NodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../2016/monitor_basado_en_angularjs_y_nodejs_para_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2016/monitor_basado_en_angularjs_y_nodejs_para_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Monitor basado en AngularJs y NodeJs para la Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2017
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="sistema_de_deteccion_de_paso_por_un_camino_con_arduino.html">
+            
+                <a href="sistema_de_deteccion_de_paso_por_un_camino_con_arduino.html">
+            
+                    
+                    Sistema de detección de paso por un camino con Arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="step_detection_system_by_a_way_with_arduino.html">
+            
+                <a href="step_detection_system_by_a_way_with_arduino.html">
+            
+                    
+                    Step detection system by a way with Arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.html">
+            
+                <a href="recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.html">
+            
+                    
+                    Recreacion del sistema de backup online usando el Resilio Sync y una Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_12.html">
+            
+                <a href="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_12.html">
+            
+                    
+                    Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 1/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html">
+            
+                <a href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html">
+            
+                    
+                    Material density detection system used to create wet wipes with Arduino 1/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.6" data-path="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_22.html">
+            
+                <a href="sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_22.html">
+            
+                    
+                    Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 2/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.html">
+            
+                <a href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.html">
+            
+                    
+                    Material density detection system used to create wet wipes with Arduino 2/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../secciones_adicionales/">
+            
+                <a href="../secciones_adicionales/">
+            
+                    
+                    Secciones adicionales
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../secciones_adicionales/links_interesantes.html">
+            
+                <a href="../secciones_adicionales/links_interesantes.html">
+            
+                    
+                    Links Interesantes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../secciones_adicionales/plugins_de_firefox.html">
+            
+                <a href="../secciones_adicionales/plugins_de_firefox.html">
+            
+                    
+                    Plugins de navegadores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../secciones_adicionales/documentos_compartidos.html">
+            
+                <a href="../secciones_adicionales/documentos_compartidos.html">
+            
+                    
+                    Documentos Compartidos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../secciones_adicionales/proyectos.html">
+            
+                <a href="../secciones_adicionales/proyectos.html">
+            
+                    
+                    Proyectos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Publicado con HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 2/2</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="sistema-de-detección-de-la-densidad-del-material-usado-para-crear-las-toallitas-húmedas-con-arduino-22">Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 2/2</h1>
+<h2 id="construcción-del-prototipo-final">Construcción del prototipo final</h2>
+<h3 id="componentes-usados">Componentes usados</h3>
+<p>Los componentes usados han sido, por módulo:</p>
+<ul>
+<li><p>Barra de densidad</p>
+<ul>
+<li>1 - <a href="http://www.ebay.es/itm/311064700128?_trksid=p2060353.m2749.l2649&amp;ssPageName=STRK%3AMEBIDX%3AIT" target="_blank">Arduino Pro Mini 5v</a></li>
+<li>4 - <a href="http://www.aliexpress.com/item/10PCS-LOT-10W-900-1000LM-LED-Bulb-IC-SMD-Lamp-Light-Daylight-white-High-Power-LED/892676886.html" target="_blank">LDRs</a></li>
+<li>4 - Resistencias 1k</li>
+<li>2 - <a href="http://www.ebay.es/itm/20pcs-2Pin-Plug-in-Screw-Terminal-Block-Connector-5-08mm-Pitch-Through-Hole-OT8G-/221790619454?hash=item33a3c0473e:g:GN4AAOSw3xJVbchf" target="_blank">Bloques Terminales para PCB</a></li>
+</ul>
+</li>
+<li><p>Barra de comunicaciones</p>
+<ul>
+<li>1 - <a href="http://www.ebay.es/itm/310562519074?_trksid=p2060353.m2749.l2649&amp;ssPageName=STRK%3AMEBIDX%3AIT" target="_blank">Arduino Pro Mini 5v</a></li>
+<li>1 - <a href="http://www.aliexpress.com/item/10pcslot-LM2596s-DC-DC-step-down-power-supply-module-3A-adjustable-step-down-module-LM2596-voltage/1289330336.html" target="_blank">Reductor voltaje LM2596s</a></li>
+<li>2 - <a href="http://www.ebay.es/itm/20pcs-2Pin-Plug-in-Screw-Terminal-Block-Connector-5-08mm-Pitch-Through-Hole-OT8G-/221790619454?hash=item33a3c0473e:g:GN4AAOSw3xJVbchf" target="_blank">Bloques Terminales para PCB</a></li>
+<li>1 - <a href="https://es.aliexpress.com/item/Free-Shopping-100PCS-TIP122-TO-220-NPN-100V-5A-Silicon-Transistors/982804378.html" target="_blank">Regulador de voltaje TIP220</a></li>
+<li>1 - <a href="http://www.ebay.es/itm/10x-Aluminum-Heatsink-Heat-Sink-with-Screw-Sets-for-TO-220-Transistor-20x15x10mm-/331644225334?hash=item4d37894736:g:pBcAAOSw3ydV5uq7" target="_blank">Disipador TIP220</a></li>
+<li>1 - <a href="http://www.dx.com/p/6w-630lm-6500k-cob-LED-module-170-x-15mm-12-14v-198118" target="_blank">LED de 6W 630lm 6500K COB de 170 x 15 mm.</a></li>
+</ul>
+</li>
+<li><p>Industruino</p>
+<ul>
+<li>1 - <a href="https://Industruino.com/" target="_blank">Industruino PROTO kit</a></li>
+<li>1 - <a href="http://www.dx.com/p/arduino-5v-relay-module-blue-black-121354" target="_blank">Modulo relé Keyes_SR1</a></li>
+</ul>
+</li>
+<li><p>Arduino con pantalla</p>
+<ul>
+<li>1 - <a href="https://store.arduino.cc/product/A000066" target="_blank">Arduino UNO R3</a></li>
+<li>1 - <a href="http://www.ebay.es/itm/Blue-Display-IIC-I2C-TWI-SP-I-Serial-Interface-1602-16X2-Character-LCD-Module-/162009210885?hash=item25b8806005:g:nsEAAOSw32lYpp16" target="_blank">Pantalla LCD de 16x2 con I2C</a></li>
+<li>3 - Resistencias 10k</li>
+<li>2 - Resistencias 220</li>
+<li>1 - LED Rojo</li>
+<li>1 - LED Verde</li>
+<li>3 - <a href="https://www.wish.com/c/5327c1b207aab40f27aecc1e" target="_blank">Botones</a></li>
+<li>1 - <a href="http://www.dx.com/p/arduino-5v-relay-module-blue-black-121354" target="_blank">Modulo relé Keyes_SR1</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="montaje-del-circuito">Montaje del circuito</h3>
+<p>El esquema en Fritzing es el siguiente:</p>
+<ul>
+<li>Barra de densidad</li>
+</ul>
+<p><img src="../imagenes/medicion_densidad/barra_densidad_bb.png" alt="Circuito que gestiona la barra de densidad" title="Circuito que gestiona la barra de densidad"></p>
+<p>Este circuito se encarga de obtener las mediciones y enviar notificaciones a la barra de comunicaciones para que las redirija.</p>
+<ul>
+<li>Barra de comunicaciones</li>
+</ul>
+<p><img src="../imagenes/medicion_densidad/barra_densidad_conector_bb.png" alt="Circuito que gestiona la barra de comunicaciones" title="Circuito que gestiona la barra de comunicaciones"></p>
+<p>Este circuito se encarga de las comunicaciones de la barra de densidad, además de la alimentación eléctrica de la barra y todos los componentes que contiene.</p>
+<ul>
+<li>Arduino con pantalla</li>
+</ul>
+<p><img src="../imagenes/medicion_densidad/ard_pantalla_bb.png" alt="Arduino con pantalla" title="Arduino con pantalla"></p>
+<p>Este montaje es el realizado para sustituir al Industruino que se quemó.</p>
+<h3 id="software-funcionalidad-a-implementar-y-diseño-del-protocolo-utilizado">Software: Funcionalidad a implementar y diseño del protocolo utilizado</h3>
+<p>En este apartado se comenta la funcionalidad que cumple el software creado y el protocolo de mensajería que se ha diseñado para que la comunicación cumpla con la funcionalidad deseada.</p>
+<p>La funcionalidad del software implementado es la siguiente:</p>
+<ul>
+<li>Auto calibración de los sensores de luz. Este paso se ha de realizar automáticamente al arrancar la barra de densidad o cuando el usuario lo pida.</li>
+<li>A partir de un valor medio de luz que se considere como válido (la calidad del producto es la correcta) se le han de indicar un porcentaje superior y uno inferior, dentro de los cuales el producto se considera que contiene la calidad deseada. El valor válido se obtendrá desde el auto calibrado.</li>
+<li>A partir de los datos de los 2 puntos anteriores enviar una señal si el producto no está dentro de la calidad deseada.</li>
+</ul>
+<p>Cada una de las barras se encarga de una o varias funcionalidades y el Industruino(y posteriormente el Arduino con pantalla) de otras, estas son:</p>
+<ul>
+<li>Industruino / Arduino con pantalla:<ul>
+<li>Configuración de los porcentajes a aplicar al valor medio de calidad.</li>
+<li>Activar la señal de aviso si recibe la notificación de que se ha encontrado algún trozo que no cumple la calidad.</li>
+<li>Petición de configuración de la barra de densidad.</li>
+</ul>
+</li>
+<li>Barra de densidad<ul>
+<li>Ejecución del auto calibrado, ya sea al arrancar o cuando se le pida.</li>
+<li>Realizar las mediciones y avisar si alguna está fuera de rango.</li>
+</ul>
+</li>
+<li>Barra de comunicaciones<ul>
+<li>Intermediario entre la barra de densidad y el Industruino, dentro de este rol se encarga de:<ul>
+<li>Convertir los porcentajes pasados por el Industruino a valores dentro del rango de medición y comunicárselos a la barra de densidad.</li>
+<li>Pedir a la barra de densidad los valores requeridos por el Industruino y transformándolos si es necesario.</li>
+<li>Filtrar los avisos de la barra de densidad al Industruino, sólo avisa al Industruino si ha habido un cambio</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Para la comunicación entre las barras se diseñó el siguiente protocolo de mensajería:</p>
+<ul>
+<li>Peticiones desde el Industruino<ol>
+<li>Petición de configuración actual de barra.
+<img src="../imagenes/medicion_densidad/esquema_01_01.es.png" alt="esquema_01_01"></li>
+<li>Datos de reconfiguración para la barra (datos modificados en Industruino y enviados a las barras).
+<img src="../imagenes/medicion_densidad/esquema_01_02.es.png" alt="esquema_01_02"></li>
+<li>Petición de auto calibrado de barra.
+<img src="../imagenes/medicion_densidad/esquema_01_03.es.png" alt="esquema_01_03"></li>
+</ol>
+</li>
+<li>Envíos al Industruino, independientes a los anteriores como respuesta a una petición de éste<ol>
+<li>Envío de información de auto calibrado (el primer arranque de la barra siempre realiza un auto calibrado, sin que se lo pida el Industruino)
+<img src="../imagenes/medicion_densidad/esquema_02_01.es.png" alt="esquema_02_01"></li>
+<li>Envío de datos sobre las lecturas. Sólo se envía cuando hay un cambio entre dentro o fuera del rango.
+<img src="../imagenes/medicion_densidad/esquema_02_02.es.png" alt="esquema_02_02"></li>
+</ol>
+</li>
+</ul>
+<h3 id="librerías-usadas-en-cada-arduino">Librerías usadas en cada Arduino:</h3>
+<p>En este apartado se enumeran cada una de las librerías que se han creado y las que se han usado para cada uno de los Arduinos que componen el proyecto.</p>
+<h4 id="barra-de-densidad">Barra de densidad</h4>
+<ul>
+<li><a href="http://www.billporter.info/easytransfer-Arduino-library/" target="_blank">EasyTransfer</a>: librería usada para las comunicaciones entre barras.</li>
+<li>Librerías internas: creadas por nosotros y usadas para facilitar la programación.<ul>
+<li>CommunicationStructures.h: usada para contener las estructuras de datos que se enviaban entre Arduinos.</li>
+<li>EEPROMAnything.h: usada para la gestión de datos que se guardaban en la EEPROM. Obtenida a partir de la siguiente URL: <a href="http://playground.Arduino.cc/Code/EEPROMWriteAnything" target="_blank">http://playground.Arduino.cc/Code/EEPROMWriteAnything</a></li>
+<li>I2C_Anything.h: usada para la gestión de lectura y escritura sobre el puerto I2C. Obtenida a partir de la siguiente URL: <a href="http://forum.Arduino.cc/index.php?topic=104732.0" target="_blank">http://forum.Arduino.cc/index.php?topic=104732.0</a>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="barra-de-comunicaciones">Barra de comunicaciones</h4>
+<ul>
+<li>Wire: librería usada para las conexiones I2C.</li>
+<li><a href="http://www.billporter.info/easytransfer-Arduino-library/" target="_blank">EasyTransfer</a>: librería usada para las comunicaciones.</li>
+<li>Librerías internas: creadas por nosotros y usadas para facilitar la programación.<ul>
+<li>CommunicationStructures.h: usada para contener las estructuras de datos que se enviaban entre Arduinos.</li>
+<li>EEPROMAnything.h: usada para la gestión de datos que se guardaban en la EEPROM. Obtenida a partir de la siguiente URL: <a href="http://playground.Arduino.cc/Code/EEPROMWriteAnything" target="_blank">http://playground.Arduino.cc/Code/EEPROMWriteAnything</a></li>
+<li>I2C_Anything.h: usada para la gestión de lectura y escritura sobre el puerto I2C. Obtenida a partir de la siguiente URL: <a href="http://forum.Arduino.cc/index.php?topic=104732.0" target="_blank">http://forum.Arduino.cc/index.php?topic=104732.0</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="industruino">Industruino</h4>
+<ul>
+<li>U8glib: librería usada para pintar en la pantalla del Industruino. Obtenida a partir de la siguiente URL: <a href="https://github.com/olikraus/u8glib" target="_blank">https://github.com/olikraus/u8glib</a></li>
+<li>M2tklib: librería usada para pintar los menús en la pantalla del Industruino. Obtenida a partir de la siguiente URL: <a href="https://github.com/olikraus/m2tklib" target="_blank">https://github.com/olikraus/m2tklib</a></li>
+<li>Wire: librería usada para las conexiones I2C.</li>
+<li><a href="http://www.billporter.info/easytransfer-Arduino-library/" target="_blank">EasyTransfer</a>: librería usada para las comunicaciones.</li>
+<li>Librerías internas: creadas por nosotros y usadas para facilitar la programación.<ul>
+<li>CommunicationStructures.h: usada para contener las estructuras de datos que se enviaban entre Arduinos.</li>
+<li>EEPROMAnything.h: usada para la gestión de datos que se guardaban en la EEPROM. Obtenida a partir de la siguiente URL: <a href="http://playground.Arduino.cc/Code/EEPROMWriteAnything" target="_blank">http://playground.Arduino.cc/Code/EEPROMWriteAnything</a></li>
+<li>I2C_Anything.h: usada para la gestión de lectura y escritura sobre el puerto I2C. Obtenida a partir de la siguiente URL: <a href="http://forum.Arduino.cc/index.php?topic=104732.0" target="_blank">http://forum.Arduino.cc/index.php?topic=104732.0</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="arduino-con-pantalla">Arduino con pantalla</h4>
+<ul>
+<li>LiquidCrystal: librería usada para pintar en la pantalla del Arduino. Obtenida a partir de la siguiente URL: <a href="https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads/" target="_blank">https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads/</a></li>
+<li>Wire: librería usada para las conexiones I2C.</li>
+<li><a href="http://www.billporter.info/easytransfer-Arduino-library/" target="_blank">EasyTransfer</a>: librería usada para las comunicaciones.</li>
+<li>Librerías internas: creadas por nosotros y usadas para facilitar la programación.<ul>
+<li>CommunicationStructures.h: usada para contener las estructuras de datos que se enviaban entre Arduinos.</li>
+<li>EEPROMAnything.h: usada para la gestión de datos que se guardaban en la EEPROM. Obtenida a partir de la siguiente URL: <a href="http://playground.Arduino.cc/Code/EEPROMWriteAnything" target="_blank">http://playground.Arduino.cc/Code/EEPROMWriteAnything</a></li>
+<li>I2C_Anything.h: usada para la gestión de lectura y escritura sobre el puerto I2C. Obtenida a partir de la siguiente URL: <a href="http://forum.Arduino.cc/index.php?topic=104732.0" target="_blank">http://forum.Arduino.cc/index.php?topic=104732.0</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="el-código-del-arduino-es-el-siguiente">El código del Arduino es el siguiente:</h3>
+<p>Para comprobar la dirección I2C de los elementos que usaban este protocolo se ha usado el programa llamado <a href="http://todbot.com/blog/2009/11/29/i2cscanner-pde-Arduino-as-i2c-bus-scanner/" target="_blank">Arduino I2c Scanner</a>.</p>
+<h4 id="librería-interna">Librería interna</h4>
+<p>Esta no es una librería de Arduino, si no, es un grupo de utilidades y definición de estructuras de datos que se usan por el resto de programas de Arduino que se usan en el proyecto.</p>
+<p>Estas clases están situadas dentro de la carpeta <code>\\Usuario\Documentos\Arduino\libraries</code>, en nuestro caso hemos creado una carpeta allí dentro con el nombre <code>utilidades_barras</code>.
+Los ficheros que la componen son:</p>
+<h5 id="communicationstructuresh">CommunicationStructures.h</h5>
+<p>Este fichero contiene las estructuras de datos que se usan para las comunicaciones entre Arduinos.</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Arduino.h&gt;</span></span>
+
+<span class="hljs-comment">/*
+    Las operaciones que se envían entre el Industruino y las barras pueden ser los siguientes:
+        1 - Petición de configuración de barra.
+        2 - Datos de reconfiguración de barra (datos modificados en Industruino y enviados a las barras).
+        3 - Petición de auto calibrado de barra.
+*/</span>
+
+<span class="hljs-comment">// Número de LDR&apos;s</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NUM_LDR 4</span>
+
+<span class="hljs-comment">/*
+    Configuración de un LDR
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">config_LDR</span>
+{</span>
+  <span class="hljs-keyword">int</span> valorMedio;
+  <span class="hljs-keyword">int</span> valorUmbralSup;
+  <span class="hljs-keyword">int</span> valorUmbralInf;
+};
+
+<span class="hljs-comment">/*
+    Valores de un LDR
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">valores_LDR</span>
+{</span>
+    <span class="hljs-keyword">int</span> valorActual;
+    <span class="hljs-keyword">int</span> valorAnterior;
+};
+
+<span class="hljs-comment">/*
+    Estructura de datos para comunicación entre barra de comunicaciones y barra de densidad
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">datos_densidad_barraCom_barraDens</span>
+{</span>
+  <span class="hljs-keyword">int</span> operacion;
+  config_LDR confLDR[NUM_LDR];
+  <span class="hljs-keyword">int</span> UmbralSup;
+  <span class="hljs-keyword">int</span> UmbralInf;
+};
+
+<span class="hljs-comment">/*
+    Estructura de datos para comunicación entre barra de densidad y barra de comunicaciones
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">datos_densidad_barraDens_barraCom</span>
+{</span>
+  boolean saldo;
+  valores_LDR valLDR[NUM_LDR];
+  <span class="hljs-comment">//Para cuando se auto calibra la barra</span>
+  boolean cambios; <span class="hljs-comment">// Indica si se devuelven cambios de configuración o datos.</span>
+  config_LDR confLDR[NUM_LDR];
+};
+
+<span class="hljs-comment">/*
+    Estructura de datos para comunicación entre Industruino y barra de comunicaciones
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">datos_densidad_Industruino_barraCom</span>
+{</span>
+  <span class="hljs-keyword">int</span> operacion;
+  <span class="hljs-keyword">int</span> UmbralSup;
+  <span class="hljs-keyword">int</span> UmbralInf;
+};
+
+<span class="hljs-comment">/*
+    Estructura de datos para comunicación entre barra de comunicaciones y Industruino
+*/</span>
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">datos_densidad_barraCom_Industruino</span>
+{</span>
+  <span class="hljs-keyword">int</span> tipo; <span class="hljs-comment">//Tipo de barra.</span>
+  <span class="hljs-keyword">int</span> tipoRespuesta; <span class="hljs-comment">// Valores posibles: 1 - Respuesta a petición de configuración o a auto calibrado, 2 - Respuesta con datos.</span>
+  boolean saldo;
+  valores_LDR valLDR[NUM_LDR];
+  <span class="hljs-keyword">int</span> UmbralSup;
+  <span class="hljs-keyword">int</span> UmbralInf;
+};
+</code></pre>
+<h5 id="eepromanythingh">EEPROMAnything.h</h5>
+<p>Este fichero se usa para la gestión de datos que se guardan en la EEPROM. Ha sido obtenida a partir de la información contenida en la siguiente página de la web de Arduino: <a href="http://playground.Arduino.cc/Code/EEPROMWriteAnything" target="_blank">http://playground.Arduino.cc/Code/EEPROMWriteAnything</a>.</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;EEPROM.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Arduino.h&gt;</span>  <span class="hljs-comment">// for type definitions</span></span>
+
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>&gt;</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">EEPROM_writeAnything</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ee, <span class="hljs-keyword">const</span> T&amp; value)</span>
+</span>{
+  <span class="hljs-keyword">const</span> byte* p = (<span class="hljs-keyword">const</span> byte*)(<span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span>*)&amp;value;
+  <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> i;
+  <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in"><span class="hljs-keyword">sizeof</span></span>(value); i++)
+    EEPROM.<span class="hljs-built_in">write</span>(ee++, *p++);
+  <span class="hljs-keyword">return</span> i;
+}
+
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>&gt;</span> <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">EEPROM_readAnything</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ee, T&amp; value)</span>
+</span>{
+  byte* p = (byte*)(<span class="hljs-keyword">void</span>*)&amp;value;
+  <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> i;
+  <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in"><span class="hljs-keyword">sizeof</span></span>(value); i++)
+    *p++ = EEPROM.<span class="hljs-built_in">read</span>(ee++);
+  <span class="hljs-keyword">return</span> i;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">EEPROM_clear</span><span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-comment">// write a 0 to all 512 bytes of the EEPROM</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">512</span>; i++)
+    EEPROM.<span class="hljs-built_in">write</span>(i, <span class="hljs-number">0</span>);
+}
+</code></pre>
+<h5 id="i2canythingh">I2C_Anything.h</h5>
+<p>Este fichero se usa para la gestión de lectura y escritura sobre el puerto I2C. Ha sido obtenida a partir de la información contenida en la siguiente entrada del blog de Arduino: <a href="http://forum.Arduino.cc/index.php?topic=104732.0" target="_blank">http://forum.Arduino.cc/index.php?topic=104732.0</a></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// Written by Nick Gammon</span>
+<span class="hljs-comment">// May 2012</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Arduino.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Wire.h&gt;</span></span>
+
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T&gt; <span class="hljs-function"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> <span class="hljs-title">I2C_writeAnything</span> <span class="hljs-params">(<span class="hljs-keyword">const</span> T&amp; value)</span>
+  </span>{
+    <span class="hljs-keyword">const</span> byte * p = (<span class="hljs-keyword">const</span> byte*) &amp;value;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> i;
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">sizeof</span> value; i++)
+          Wire.<span class="hljs-built_in">write</span>(*p++);
+    <span class="hljs-keyword">return</span> i;
+  }  <span class="hljs-comment">// end of I2C_writeAnything</span>
+
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T&gt; <span class="hljs-function"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> <span class="hljs-title">I2C_readAnything</span><span class="hljs-params">(T&amp; value)</span>
+  </span>{
+    byte * p = (byte*) &amp;value;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> i;
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">sizeof</span> value; i++)
+          *p++ = Wire.<span class="hljs-built_in">read</span>();
+    <span class="hljs-keyword">return</span> i;
+  }  <span class="hljs-comment">// end of I2C_readAnything</span>
+</code></pre>
+<h4 id="barra-de-densidad">Barra de densidad</h4>
+<p>Los ficheros que componen este proyecto/programa son:</p>
+<ul>
+<li><strong>barra_densidad.ino:</strong> Este fichero es el fichero base del proyecto y contiene los siguientes elementos:<ul>
+<li>Métodos básicos de un programa en Arduino (setup y loop).</li>
+<li>Declaración e inicialización de variables globales.</li>
+<li>Declaración de estructuras de datos internas al programa.</li>
+</ul>
+</li>
+<li><strong>datos_densidad.ino:</strong> Este fichero contiene las estructuras de datos con la información de la barra de densidad y la gestión de estas.</li>
+<li><strong>datos_LDR.ino:</strong> Este fichero contiene la gestión de configuración y acceso a datos de los LDRs, adicionalmente cuando obtiene los datos de los LDRs los procesa.</li>
+</ul>
+<p>Pueden consultarse y obtenerse desde la siguiente url de la web de Arduino Create: <a href="https://create.arduino.cc/editor/juaalta/f1582038-8bc2-4954-b314-7a588bcfdb62/preview" target="_blank">https://create.arduino.cc/editor/juaalta/f1582038-8bc2-4954-b314-7a588bcfdb62/preview</a>.</p>
+<h4 id="barra-de-comunicaciones">Barra de comunicaciones</h4>
+<p>Los ficheros que componen este proyecto/programa son:</p>
+<ul>
+<li><strong>barra_densidad_conector.ino:</strong> Este fichero es el fichero base del proyecto y contiene los siguientes elementos:<ul>
+<li>Métodos básicos de un programa en Arduino (setup y loop).</li>
+<li>Declaración e inicialización de variables globales.</li>
+<li>Declaración de estructuras de datos internas al programa.</li>
+</ul>
+</li>
+<li><strong>datos_densidad.ino:</strong> Este fichero contiene las estructuras de datos con la información de la barra de densidad y la gestión de estas.</li>
+</ul>
+<p>Pueden consultarse y obtenerse desde la siguiente url de la web de Arduino Create: <a href="https://create.arduino.cc/editor/juaalta/000576a7-42f4-4b74-bb22-ea69ef1e2e21/preview" target="_blank">https://create.arduino.cc/editor/juaalta/000576a7-42f4-4b74-bb22-ea69ef1e2e21/preview</a></p>
+<h4 id="industruino">Industruino</h4>
+<p>Los ficheros que componen este proyecto/programa son:</p>
+<ul>
+<li><strong>Industruino.ino:</strong> Este fichero es el fichero base del proyecto y contiene los siguientes elementos:<ul>
+<li>Métodos básicos de un programa en Arduino (setup y loop).</li>
+<li>Declaración e inicialización de variables globales.</li>
+<li>Declaración de estructuras de datos internas al programa.</li>
+</ul>
+</li>
+<li><strong>Industruino_I2c.ino:</strong> Este fichero contiene la gestión de las comunicaciones I2C.</li>
+<li><strong>Industruino_Menu.ino:</strong> Este fichero contiene el pintado y gestión del menú del programa.</li>
+<li><strong>Industruino_Pantalla.ino:</strong> Este fichero contiene la gestión de la pantalla.</li>
+<li><strong>Industruino_datos.ino:</strong> Este fichero contiene la gestión de los datos recibidos y a enviar.</li>
+</ul>
+<p>Pueden consultarse y obtenerse desde la siguiente url de la web de Arduino Create: <a href="https://create.arduino.cc/editor/juaalta/7aaf80e0-d9bd-4757-94cd-27b26e6f5ace/preview" target="_blank">https://create.arduino.cc/editor/juaalta/7aaf80e0-d9bd-4757-94cd-27b26e6f5ace/preview</a></p>
+<h4 id="arduino-con-pantalla">Arduino con pantalla</h4>
+<p>Los ficheros que componen este proyecto/programa son:</p>
+<ul>
+<li><strong>ard_pantalla.ino:</strong> Este fichero es el fichero base del proyecto y contiene los siguientes elementos:<ul>
+<li>Métodos básicos de un programa en Arduino (setup y loop).</li>
+<li>Declaración e inicialización de variables globales.</li>
+<li>Declaración de estructuras de datos internas al programa.</li>
+</ul>
+</li>
+<li><strong>Botones.ino:</strong> Este fichero contiene los métodos utilizados para trabajar con los botones.</li>
+<li><strong>conexion_I2c.ino:</strong> Este fichero contiene la gestión de las comunicaciones I2C.</li>
+<li><strong>Menus.ino:</strong> Este fichero contiene el pintado y gestión del menú del programa.</li>
+<li><strong>Pantalla.ino:</strong> Este fichero contiene la gestión de la pantalla.</li>
+<li><strong>gestion_datos.ino:</strong> Este fichero contiene la gestión de los datos recibidos y a enviar.</li>
+</ul>
+<p>Pueden consultarse y obtenerse desde la siguiente url de la web de Arduino Create: <a href="https://create.arduino.cc/editor/juaalta/f1582038-8bc2-4954-b314-7a588bcfdb62/preview" target="_blank">https://create.arduino.cc/editor/juaalta/f1582038-8bc2-4954-b314-7a588bcfdb62/preview</a></p>
+<h2 id="agradecimientos">Agradecimientos</h2>
+<p>A mi amigo Fran por pensar en mí para la realización de este proyecto, sin el no hubiera tenido ningún contacto con el mundo de Arduino.</p>
+<p>A mi hermano Raul por la creación del banco de pruebas y por darnos alguna solución ingeniosa a los problemas estructurales de las barras que nos encontramos por el camino y nos bloquearon en algún momento puntual.</p>
+<p>A mi amigo Sergio por sus ayudas puntuales en el diseño de la electrónica.</p>
+<p>A Mario y a Jose Antonio por ayudarme a revisar el artículo y proponerme mejoras en la redacción y la forma.</p>
+<p>Al resto de gente que con sus ánimos y ayudas puntuales nos ayudaron a acabar este proyecto.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html" class="navigation navigation-prev " aria-label="Previous page: Material density detection system used to create wet wipes with Arduino 1/2">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.html" class="navigation navigation-next " aria-label="Next page: Material density detection system used to create wet wipes with Arduino 2/2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 2/2","level":"1.9.6","depth":2,"next":{"title":"Material density detection system used to create wet wipes with Arduino 2/2","level":"1.9.7","depth":2,"path":"2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.md","ref":"2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.md","articles":[]},"previous":{"title":"Material density detection system used to create wet wipes with Arduino 1/2","level":"1.9.5","depth":2,"path":"2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.md","ref":"2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Juan Salvador Aleixandre Talens","pdf":{"pageBreaksBefore":"/","toc":true,"embedFonts":false,"paperSize":"a4","margin":{"right":62,"left":62,"top":56,"bottom":56},"fontSize":12,"fontFamily":"Arial","chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blog Cosillas de Juansal","language":"es","links":{"sidebar":{"Cosillas de Juansal - Blog":"http://blog.juansal.com"}},"gitbook":"*"},"file":{"path":"2017/sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_22.md","mtime":"2021-05-03T23:24:58.261Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-05-03T23:25:17.122Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

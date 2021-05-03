@@ -1,0 +1,1452 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Pasos seguidos para crear un sistema de backup online usando el BitTorrent y una Cubietruck (Cubieboard 3) · Blog Cosillas de Juansal</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.20">
+        <meta name="author" content="Juan Salvador Aleixandre Talens">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html" />
+    
+    
+    <link rel="prev" href="lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://blog.juansal.com" target="_blank" class="custom-link">Cosillas de Juansal - Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../2010/">
+            
+                <a href="../2010/">
+            
+                    
+                    2010
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../2010/presentacion.html">
+            
+                <a href="../2010/presentacion.html">
+            
+                    
+                    Presentación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../2010/migracion_de_rx_components_a_jvcl_i.html">
+            
+                <a href="../2010/migracion_de_rx_components_a_jvcl_i.html">
+            
+                    
+                    Migración de RX Components a JVCL I
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../2010/migracion_de_rx_components_a_jvcl_0.html">
+            
+                <a href="../2010/migracion_de_rx_components_a_jvcl_0.html">
+            
+                    
+                    Migración de RX Components a JVCL 0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../2010/activar_la_cuenta_root_en_ubuntu.html">
+            
+                <a href="../2010/activar_la_cuenta_root_en_ubuntu.html">
+            
+                    
+                    Activar la cuenta root en Ubuntu 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../2010/reseteo_del_id_y_de_la_mac_de_una_maquina_virtual_en_vmware.html">
+            
+                <a href="../2010/reseteo_del_id_y_de_la_mac_de_una_maquina_virtual_en_vmware.html">
+            
+                    
+                    Reseteo del ID y de la MAC de una máquina virtual en VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../2010/hacer_que_el_vmware_utilice_la_memoria_fisica_y_no_un_fichero_en_una_maquina_virtual.html">
+            
+                <a href="../2010/hacer_que_el_vmware_utilice_la_memoria_fisica_y_no_un_fichero_en_una_maquina_virtual.html">
+            
+                    
+                    Hacer que el VMware utilice la memoria física y no un fichero en una máquina virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../2010/crear_un_mirror_de_un_repositorio_de_subversion.html">
+            
+                <a href="../2010/crear_un_mirror_de_un_repositorio_de_subversion.html">
+            
+                    
+                    Crear un mirror de un repositorio de subversion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo.html">
+            
+                <a href="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo.html">
+            
+                    
+                    Lectura de ficheros INI sin secciones con Inno Setup desde código
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo_continuacion.html">
+            
+                <a href="../2010/lectura_de_ficheros_ini_sin_secciones_con_inno_setup_desde_codigo_continuacion.html">
+            
+                    
+                    Lectura de ficheros INI sin secciones con Inno Setup desde código (continuación)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../2010/desactivacion_de_unity_de_las_maquinas_virtuales_de_vmware_workstation.html">
+            
+                <a href="../2010/desactivacion_de_unity_de_las_maquinas_virtuales_de_vmware_workstation.html">
+            
+                    
+                    Desactivación de Unity de las máquinas virtuales de VMware Workstation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2011/">
+            
+                <a href="../2011/">
+            
+                    
+                    2011
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2011/plugin_de_firefox.html">
+            
+                <a href="../2011/plugin_de_firefox.html">
+            
+                    
+                    Plugin de Firefox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2011/cambiar_el_propietario_y_el_grupo_al_que_pertenece_un_fichero_o_una_carpeta_en_linux.html">
+            
+                <a href="../2011/cambiar_el_propietario_y_el_grupo_al_que_pertenece_un_fichero_o_una_carpeta_en_linux.html">
+            
+                    
+                    Cambiar el propietario y el grupo al que pertenece un fichero o una carpeta en linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2011/obtener_informacion_de_la_maquina_y_del_windows_instalado_en_ella_desde_linea_de_comandos.html">
+            
+                <a href="../2011/obtener_informacion_de_la_maquina_y_del_windows_instalado_en_ella_desde_linea_de_comandos.html">
+            
+                    
+                    Obtener información de la máquina y del Windows instalado en ella desde línea de comandos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../2012/">
+            
+                <a href="../2012/">
+            
+                    
+                    2012
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../2012/conversion_de_disco_virtual_de_virtualbox_a_vmware.html">
+            
+                <a href="../2012/conversion_de_disco_virtual_de_virtualbox_a_vmware.html">
+            
+                    
+                    Conversión de disco virtual de VirtualBox a VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../2012/forzar_a_un_maquina_virtual_de_vmware_a_usar_un_adaptador_de_red_especifico.html">
+            
+                <a href="../2012/forzar_a_un_maquina_virtual_de_vmware_a_usar_un_adaptador_de_red_especifico.html">
+            
+                    
+                    Forzar a un máquina Virtual de VMware a usar un adaptador de red específico
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../2013/">
+            
+                <a href="../2013/">
+            
+                    
+                    2013
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../2013/log4net_con_c.html">
+            
+                <a href="../2013/log4net_con_c.html">
+            
+                    
+                    Log4net con C#
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../2013/log4net_con_vbnet.html">
+            
+                <a href="../2013/log4net_con_vbnet.html">
+            
+                    
+                    Log4net con VB.NET
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../2013/log4java_en_java.html">
+            
+                <a href="../2013/log4java_en_java.html">
+            
+                    
+                    Log4Java en Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../2013/como_obtener_el_id_autogenerado_al_realizar_un_insert_en_una_base_de_datos.html">
+            
+                <a href="../2013/como_obtener_el_id_autogenerado_al_realizar_un_insert_en_una_base_de_datos.html">
+            
+                    
+                    Como obtener el ID autogenerado al realizar un insert en una base de datos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../2013/mozilla_add-on_builder_posibilidades_a_la_hora_de_abrir_un_link_desde_una_entrada_de_menu.html">
+            
+                <a href="../2013/mozilla_add-on_builder_posibilidades_a_la_hora_de_abrir_un_link_desde_una_entrada_de_menu.html">
+            
+                    
+                    Mozilla Add-on builder: Posibilidades a la hora de abrir un link desde una entrada de menú
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../2013/mis_primeras_impresiones_con_ouya.html">
+            
+                <a href="../2013/mis_primeras_impresiones_con_ouya.html">
+            
+                    
+                    Mis primeras impresiones con Ouya
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2014
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.html">
+            
+                <a href="lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.html">
+            
+                    
+                    Líneas mínimas a añadir al código del Industruino para usar las librerías m2tklib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2" data-path="pasos_seguidos_para_crear_un_sistema_de_backup_online_usando_el_bittorrent_y_una_cubietruck_cubieboard_3.html">
+            
+                <a href="pasos_seguidos_para_crear_un_sistema_de_backup_online_usando_el_bittorrent_y_una_cubietruck_cubieboard_3.html">
+            
+                    
+                    Pasos seguidos para crear un sistema de backup online usando el BitTorrent y una Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                <a href="informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Información sobre temperatura y discos duros en la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../2015/">
+            
+                <a href="../2015/">
+            
+                    
+                    2015
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../2015/markdown.html">
+            
+                <a href="../2015/markdown.html">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../2015/maquina_virtual_para_trabajar_con_documentos_en_markdown.html">
+            
+                <a href="../2015/maquina_virtual_para_trabajar_con_documentos_en_markdown.html">
+            
+                    
+                    Máquina virtual para trabajar con documentos en Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../2015/anadir_a_un_usuario_los_permisos_de_sudo_en_fedora.html">
+            
+                <a href="../2015/anadir_a_un_usuario_los_permisos_de_sudo_en_fedora.html">
+            
+                    
+                    Añadir a un usuario los permisos de sudo en Fedora
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../2015/instalacion_y_primeros_pasos_con_haroopress.html">
+            
+                <a href="../2015/instalacion_y_primeros_pasos_con_haroopress.html">
+            
+                    
+                    Instalación y primeros pasos con Haroopress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../2015/formato_de_datos_de_haroopress.html">
+            
+                <a href="../2015/formato_de_datos_de_haroopress.html">
+            
+                    
+                    Formato de datos de Haroopress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../2015/web_con_informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2015/web_con_informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Web con información sobre temperatura y discos duros en la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../2015/organizar_fotos_por_fecha_usando_zoner_photo_studio.html">
+            
+                <a href="../2015/organizar_fotos_por_fecha_usando_zoner_photo_studio.html">
+            
+                    
+                    Organizar fotos por fecha usando Zoner Photo Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../2015/construccion_de_maquina_recreativa_-_introduccion.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_introduccion.html">
+            
+                    
+                    Construcción de máquina recreativa - Introducción 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_construccion_del_mueble.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_construccion_del_mueble.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Construcción del mueble 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_entrada_de_alimentacion_y_ventilacion.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_entrada_de_alimentacion_y_ventilacion.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Entrada de alimentación y ventilación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_cableado.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_cableado.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Cableado
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_botones_de_encendido_y_apagado_de_la_maquina.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_botones_de_encendido_y_apagado_de_la_maquina.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Botones de encendido y apagado de la máquina
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../2015/construccion_de_maquina_recreativa_-_mueble_-_bezel.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_mueble_-_bezel.html">
+            
+                    
+                    Construcción de máquina recreativa - Mueble - Bezel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../2015/construccion_de_maquina_recreativa_-_el_video.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_el_video.html">
+            
+                    
+                    Construcción de máquina recreativa - El Vídeo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../2015/construccion_de_maquina_recreativa_-_los_controles.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_los_controles.html">
+            
+                    
+                    Construcción de máquina recreativa - Los Controles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="../2015/construccion_de_maquina_recreativa_-_el_sonido.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_el_sonido.html">
+            
+                    
+                    Construcción de máquina recreativa - El Sonido
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.17" data-path="../2015/construccion_de_maquina_recreativa_-_agradecimientos.html">
+            
+                <a href="../2015/construccion_de_maquina_recreativa_-_agradecimientos.html">
+            
+                    
+                    Construcción de máquina recreativa - Agradecimientos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.18" data-path="../2015/sistema_de_apertura_de_un_escaparate_con_arduino.html">
+            
+                <a href="../2015/sistema_de_apertura_de_un_escaparate_con_arduino.html">
+            
+                    
+                    Sistema de apertura de un escaparate con arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.19" data-path="../2015/instalacion_de_las_vmware_tools_en_linux,_a_partir_de_la_version_12_de_vmware.html">
+            
+                <a href="../2015/instalacion_de_las_vmware_tools_en_linux,_a_partir_de_la_version_12_de_vmware.html">
+            
+                    
+                    Instalación de las vmware tools en linux, a partir de la versión 12 de VMware
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../2016/">
+            
+                <a href="../2016/">
+            
+                    
+                    2016
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../2016/maquina_virtual_para_trabajar_con_documentos_en_markdown_-_nueva_version.html">
+            
+                <a href="../2016/maquina_virtual_para_trabajar_con_documentos_en_markdown_-_nueva_version.html">
+            
+                    
+                    Máquina virtual para trabajar con documentos en Markdown - Nueva versión
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../2016/opening_system_of_a_showcase_with_arduino.html">
+            
+                <a href="../2016/opening_system_of_a_showcase_with_arduino.html">
+            
+                    
+                    Opening system of a showcase with arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../2016/informacion_sobre_la_cpu_de_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2016/informacion_sobre_la_cpu_de_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Información sobre la CPU de la cubietruck (cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../2016/maquina_virtual_de_desarrollo_para_proyectos_de_angularjs_y_nodejs.html">
+            
+                <a href="../2016/maquina_virtual_de_desarrollo_para_proyectos_de_angularjs_y_nodejs.html">
+            
+                    
+                    Máquina virtual de desarrollo para proyectos de AngularJS y NodeJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../2016/monitor_basado_en_angularjs_y_nodejs_para_la_cubietruck_cubieboard_3.html">
+            
+                <a href="../2016/monitor_basado_en_angularjs_y_nodejs_para_la_cubietruck_cubieboard_3.html">
+            
+                    
+                    Monitor basado en AngularJs y NodeJs para la Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../2017/">
+            
+                <a href="../2017/">
+            
+                    
+                    2017
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../2017/sistema_de_deteccion_de_paso_por_un_camino_con_arduino.html">
+            
+                <a href="../2017/sistema_de_deteccion_de_paso_por_un_camino_con_arduino.html">
+            
+                    
+                    Sistema de detección de paso por un camino con Arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../2017/step_detection_system_by_a_way_with_arduino.html">
+            
+                <a href="../2017/step_detection_system_by_a_way_with_arduino.html">
+            
+                    
+                    Step detection system by a way with Arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../2017/recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.html">
+            
+                <a href="../2017/recreacion_del_sistema_de_backup_online_usando_el_resilio_sync_y_una_cubietruck_cubieboard_3.html">
+            
+                    
+                    Recreacion del sistema de backup online usando el Resilio Sync y una Cubietruck (Cubieboard 3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../2017/sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_12.html">
+            
+                <a href="../2017/sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_12.html">
+            
+                    
+                    Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 1/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html">
+            
+                <a href="../2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_12.html">
+            
+                    
+                    Material density detection system used to create wet wipes with Arduino 1/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../2017/sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_22.html">
+            
+                <a href="../2017/sistema_de_deteccion_de_la_densidad_del_material_usado_para_crear_las_toallitas_humedas_con_arduino_22.html">
+            
+                    
+                    Sistema de detección de la densidad del material usado para crear las toallitas húmedas con Arduino 2/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.html">
+            
+                <a href="../2017/material_density_detection_system_used_to_create_wet_wipes_with_arduino_22.html">
+            
+                    
+                    Material density detection system used to create wet wipes with Arduino 2/2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../secciones_adicionales/">
+            
+                <a href="../secciones_adicionales/">
+            
+                    
+                    Secciones adicionales
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../secciones_adicionales/links_interesantes.html">
+            
+                <a href="../secciones_adicionales/links_interesantes.html">
+            
+                    
+                    Links Interesantes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../secciones_adicionales/plugins_de_firefox.html">
+            
+                <a href="../secciones_adicionales/plugins_de_firefox.html">
+            
+                    
+                    Plugins de navegadores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../secciones_adicionales/documentos_compartidos.html">
+            
+                <a href="../secciones_adicionales/documentos_compartidos.html">
+            
+                    
+                    Documentos Compartidos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../secciones_adicionales/proyectos.html">
+            
+                <a href="../secciones_adicionales/proyectos.html">
+            
+                    
+                    Proyectos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Publicado con HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Pasos seguidos para crear un sistema de backup online usando el BitTorrent y una Cubietruck (Cubieboard 3)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pasos-seguidos-para-crear-un-sistema-de-backup-online-usando-el-bittorrent-y-una-cubietruck-cubieboard-3">Pasos seguidos para crear un sistema de backup online usando el BitTorrent y una Cubietruck (Cubieboard 3)</h1>
+<h2 id="consideraciones-iniciales-sobre-el-documento">Consideraciones iniciales sobre el documento</h2>
+<p>En este documento se detallan los pasos seguidos para instalar el Lubuntu en una Cubietruck (Cubieboard 3) y el BitTorrent Sync.<br>Los pasos detallados son los que yo he seguido y que a mí me han funcionado.<br>En mi caso en la tarjeta SD está el sistema operativo y las aplicaciones, en el disco duro sólo se encuentran los ficheros del BitTorrent Sync.</p>
+<h2 id="instalación-del-sistema-operativo-en-tarjeta-sd">Instalación del sistema operativo en tarjeta SD</h2>
+<p>En este apartado se detallan los pasos para realizar la instalación del Lubuntu dentro de la tarjeta SD.</p>
+<h3 id="consideraciones-iniciales">Consideraciones iniciales</h3>
+<p>Para realizar los pasos detallados a continuación se ha utilizado un sistema Ubuntu.<br>La tarjeta SD estaba montada como <code>sdb</code>.</p>
+<h3 id="instalación-del-sistema-operativo-dentro-de-la-tarjeta-sd">Instalación del sistema operativo dentro de la tarjeta SD</h3>
+<p>El sistema operativo sobre el que se han realizado las acciones siguientes ha sido el Lubuntu para la cubieboard, aunque la versión de linux sobre la que se ejecuten no debería de importar.</p>
+<p>Los pasos seguidos han sido los siguientes:</p>
+<ul>
+<li><p>Asignación de la ruta en la que está la tarjeta a una variable del sistema</p>
+<pre><code class="lang-bash">card=/dev/sdb
+</code></pre>
+</li>
+<li><p>Limpieza de la tarjeta SD:</p>
+<pre><code class="lang-bash">sudo dd <span class="hljs-keyword">if</span>=/dev/zero of=<span class="hljs-variable">${card}</span> bs=1024 seek=544 count=128
+</code></pre>
+</li>
+<li><p>Hacer la tarjeta SD arrancable:</p>
+<pre><code class="lang-bash">sudo dd <span class="hljs-keyword">if</span>=u-boot-sunxi-with-spl-ct-20131102.bin of=<span class="hljs-variable">$card</span> bs=1024 seek=8
+</code></pre>
+</li>
+<li><p>Particionado de la tarjeta SD: Esta se ha de particionar en 2 particiones, la primera de 64Mb. (2048 sectores) y la segunda del resto del tamaño. Ejemplo de como se queda:</p>
+<pre><code class="lang-bash">Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1            2048      133119       65536   83  Linux
+/dev/sdb2          133120    15278079     7572480   83  Linux
+</code></pre>
+<p>Para poder realizar la modificación de la partición se ha usado el comando siguiente:</p>
+<pre><code class="lang-bash">sudo fdisk <span class="hljs-variable">$card</span>
+</code></pre>
+</li>
+<li><p>Formateado de las particiones creadas:</p>
+<pre><code class="lang-bash">sudo mkfs.ext2 <span class="hljs-variable">${card}</span>1
+sudo mkfs.ext4 <span class="hljs-variable">${card}</span>2
+</code></pre>
+</li>
+<li><p>Copiado de los datos a la tarjeta SD:</p>
+<pre><code class="lang-bash">mkdir /tmp/sdb1 /tmp/sdb2
+sudo mount -t ext2 <span class="hljs-variable">${card}</span>1 /tmp/sdb1
+sudo mount -t ext4 <span class="hljs-variable">${card}</span>2 /tmp/sdb2
+sudo tar -C /tmp/sdb1 -xvf bootfs-part1.tar.gz
+sudo tar -C /tmp/sdb2 -xvf rootfs-part2.tar.gz
+sync
+sudo umount /tmp/sdb1
+sudo umount /tmp/sdb2
+</code></pre>
+</li>
+</ul>
+<h3 id="configuración-del-sistema-operativo">Configuración del sistema operativo</h3>
+<h4 id="configuración-del-teclado-en-español">Configuración del teclado en español:</h4>
+<p>Para esto ejecutamos el siguiente comando:</p>
+<pre><code class="lang-bash">sudo dpkg-reconfigure keyboard-configuration
+</code></pre>
+<p>Este comando se encarga de lanzar la aplicación de reconfiguración del teclado.
+Seleccionamos <strong>Generic 105 key (Intl PC)</strong>, el idioma <strong>Spanish</strong> y luego las opciones predeterminadas con <strong>OK</strong>.</p>
+<h4 id="configuración-de-red">Configuración de red:</h4>
+<p>En mi caso no la he tocado, ya que uso el DHCP, que es la configuración que viene por defecto.</p>
+<h4 id="configuración-de-la-zona-horaria">Configuración de la zona horaria:</h4>
+<p>Para esto ejecutamos el siguiente comando:</p>
+<pre><code class="lang-bash">sudo dpkg-reconfigure tzdata
+</code></pre>
+<p>Este comando se encarga de lanzar la aplicación de reconfiguración de la zona horaria.
+Seleccionamos la zona geográfica <strong>Europe</strong> y la zona horaria <strong>Madrid</strong>.</p>
+<h4 id="cambio-del-nombre-a-la-cubieboard">Cambio del nombre a la cubieboard:</h4>
+<p>Para esto tenemos que crear/modificar el fichero <strong>/etc/hosts</strong> y añadir el nombre que deseemos que tenga la cubieboard.</p>
+<p>Para ello ejecutaremos el siguiente comando:</p>
+<pre><code class="lang-bash">sudo nano/etc/hosts
+</code></pre>
+<p>Y añadiremos la siguiente línea, donde <em>cubieboard</em> es el nombre que le asignaremos:</p>
+<pre><code>127.0.0.1 cubieboard
+</code></pre><h4 id="montado-del-disco-duro">Montado del disco duro:</h4>
+<p>En mi caso el disco duro es <strong>/dev/sda1</strong>.<br>El disco duro se va a montar sobre la carpeta <strong>/media/hdd</strong>.<br>Para montar el disco duro y que la configuración se guarde entre arranques del sistema operativo se ha de modificar el fichero <strong>/etc/fstab</strong>. Para ello añadiremos la siguiente línea a dicho fichero.</p>
+<pre><code>/dev/sda1 /media/hdd ext4 defaults 0 2
+</code></pre><h1 id="instalación-y-configuración-del-bitorrent-sync">Instalación y configuración del Bitorrent Sync</h1>
+<h2 id="consideraciones-iniciales">Consideraciones iniciales</h2>
+<p>Las consideraciones inciales son las siguientes:</p>
+<ul>
+<li>El BitTorrent Sync lo descargo dentro de la carpeta <strong>/home/linaro/Downloads/</strong> y se descomprime dentro de <strong>/home/linaro/Downloads/btsync</strong>.</li>
+<li>El binario lo dejo dentro de la carpeta <strong>/usr/local/bin/</strong>.</li>
+<li>La configuración del programa está en el fichero <strong>/etc/btsync/btsync.conf</strong>.</li>
+<li>Tengo un script de arranque del programa, para que este arranque al arrancar el sistema operativo.</li>
+<li>El disco duro se ha montado sobre la carpeta: <strong>/media/hdd/</strong>.</li>
+</ul>
+<h2 id="proceso-de-instalación">Proceso de instalación</h2>
+<ul>
+<li><p>Descarga del Bittorrent Sync.</p>
+<pre><code class="lang-bash">wget http://download-new.utorrent.com/endpoint/btsync/os/linux-arm/track/stable
+mkdir btsync
+mv stable btsync_arm.tar.gz
+tar zxvf btsync_arm.tar.gz -C btsync
+</code></pre>
+</li>
+<li><p>Creamos variables del sistema para ayudarnos en la creación</p>
+<pre><code class="lang-bash">config=<span class="hljs-string">&quot;/etc/btsync/btsync.conf&quot;</span>
+user=<span class="hljs-string">&quot;root&quot;</span>
+</code></pre>
+</li>
+<li><p>Comando a ejecutar para que el programa arranque, en mi caso ha hecho falta, aunque no siempre es preciso. Este paso consiste en linkar el nombre de una librería, para que el programa pueda encontrarla. Esto es necesario para cuando se lance el comando del punto siguiente y este de un error.</p>
+<pre><code class="lang-bash">ln -s /lib/arm-linux-gnueabihf/ld-linux.so.3 /lib/ld-linux.so.3
+</code></pre>
+</li>
+<li><p>Extracción del fichero de configuración por defecto.
+btsync --dump-sample-config &gt; $config</p>
+</li>
+<li><p>Reconfiguración del fichero de configuración por defecto. Para ello se lanzan los siguientes comandos.</p>
+<pre><code class="lang-bash">sed -i <span class="hljs-string">&apos;s/&quot;device_name&quot;\s*:\s*&quot;My Sync Device&quot;/&quot;device_name&quot;: &quot;CUBIEBOARD&quot;/g&apos;</span> <span class="hljs-variable">$config</span>
+sed -i <span class="hljs-string">&apos;s/&quot;storage_path&quot;\s*:\s*&quot;\/home\/user\/\.sync&quot;/&quot;storage_path&quot;: &quot;\/media\/hdd\/btsync&quot;/g&apos;</span> <span class="hljs-variable">$config</span>
+sed -i <span class="hljs-string">&apos;s/&quot;login&quot;\s*:\s*&quot;admin&quot;,//g&apos;</span> <span class="hljs-variable">$config</span>
+sed -i <span class="hljs-string">&apos;s/&quot;password&quot;\s*:\s*&quot;password&quot;//g&apos;</span> <span class="hljs-variable">$config</span>
+sed -i <span class="hljs-string">&apos;s/:8888&quot;,/:8888&quot;/g&apos;</span> <span class="hljs-variable">$config</span>
+</code></pre>
+<p>Como puede observarse se han cambiado los parámetros <em>device_name</em>, <em>storage_path</em>, <em>login</em> y <em>password</em>. Los comandos anteriores tambien pueden cambiarse por un simple <code>nano $config</code> y cambiar los parámetros de forma manual. De todas formas es recomandable lanzar este último parámetro para revisar la configuración y ver si se quiere cambiar algún parámetro más.</p>
+</li>
+<li><p>Creación del script de arranque automático.</p>
+<pre><code class="lang-bash">mkdir /var/run/btsync/
+nano /etc/init.d/btsync
+</code></pre>
+</li>
+</ul>
+<p>El contenido del fichero <code>/etc/init.d/btsync</code> es el siguiente:</p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/sh</span>
+<span class="hljs-comment">### BEGIN INIT INFO</span>
+<span class="hljs-comment"># Provides: btsync</span>
+<span class="hljs-comment"># Required-Start: \$syslog \$remote_fs</span>
+<span class="hljs-comment"># Required-Stop: \$syslog \$remote_fs</span>
+<span class="hljs-comment"># Should-Start: \$local_fs</span>
+<span class="hljs-comment"># Should-Stop: \$local_fs</span>
+<span class="hljs-comment"># Default-Start: 2 3 4 5</span>
+<span class="hljs-comment"># Default-Stop: 0 1 6</span>
+<span class="hljs-comment"># Short-Description: btsync - Bittorent SyncApp</span>
+<span class="hljs-comment"># Description: btsync - Bittorent SyncApp</span>
+<span class="hljs-comment">### END INIT INFO</span>
+
+user=root
+group=root
+
+<span class="hljs-comment"># the full path to the filename where you store your rtorrent configuration</span>
+config=<span class="hljs-string">&quot;/etc/btsync/btsync.conf&quot;</span>
+
+<span class="hljs-comment"># set of options to run with</span>
+options=<span class="hljs-string">&quot;&quot;</span>
+
+PATH=/usr/<span class="hljs-built_in">local</span>/sbin:/usr/<span class="hljs-built_in">local</span>/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/<span class="hljs-built_in">local</span>/bin/btsync
+DAEMON_ARGS=<span class="hljs-string">&quot;--config \$config&quot;</span>
+NAME=btsync
+DESC=btsync
+
+RUNDIR=/var/run/syncapp
+PIDFILE=/var/run/btsync.pid
+
+<span class="hljs-built_in">test</span> -x \<span class="hljs-variable">$DAEMON</span> || <span class="hljs-built_in">exit</span> 0
+
+<span class="hljs-keyword">if</span> [ -r /etc/default/\<span class="hljs-variable">$NAME</span> ]
+<span class="hljs-keyword">then</span>
+. /etc/default/\<span class="hljs-variable">$NAME</span>
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-built_in">set</span> -e
+
+<span class="hljs-keyword">case</span> <span class="hljs-string">&quot;\$1&quot;</span> <span class="hljs-keyword">in</span>
+    start)
+    <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Starting \$DESC: &quot;</span>
+    mkdir -p \<span class="hljs-variable">$RUNDIR</span>
+    touch \<span class="hljs-variable">$PIDFILE</span>
+    chown \<span class="hljs-variable">$user</span>:\<span class="hljs-variable">$group</span> \<span class="hljs-variable">$RUNDIR</span> \<span class="hljs-variable">$PIDFILE</span>
+    chmod 755 \<span class="hljs-variable">$RUNDIR</span>
+
+    <span class="hljs-keyword">if</span> [ -n <span class="hljs-string">&quot;\$ULIMIT&quot;</span> ]
+    <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">ulimit</span> -n \<span class="hljs-variable">$ULIMIT</span>
+    <span class="hljs-keyword">fi</span>
+
+    <span class="hljs-keyword">if</span> start-stop-daemon --start --quiet --<span class="hljs-built_in">umask</span> 007 --pidfile \<span class="hljs-variable">$PIDFILE</span> --chuid \<span class="hljs-variable">$user</span>:\<span class="hljs-variable">$group</span> --<span class="hljs-built_in">exec</span> \<span class="hljs-variable">$DAEMON</span> -- \<span class="hljs-variable">$DAEMON_ARGS</span>
+    <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;\$NAME.&quot;</span>
+    <span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;failed&quot;</span>
+    <span class="hljs-keyword">fi</span>
+    ;;
+
+    stop)
+    <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Stopping \$DESC: &quot;</span>
+    killall -w btsync || <span class="hljs-literal">true</span>
+    sleep 1
+    rm -f \<span class="hljs-variable">$PIDFILE</span> || <span class="hljs-literal">true</span>
+    ;;
+
+    status)
+    <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;\$DESC is &quot;</span>
+    <span class="hljs-keyword">if</span> start-stop-daemon --stop --quiet --signal 0 --name \<span class="hljs-variable">${NAME}</span> --pidfile \<span class="hljs-variable">${PIDFILE}</span>
+    <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;running&quot;</span>
+    <span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;not running&quot;</span>
+    <span class="hljs-built_in">exit</span> 1
+    <span class="hljs-keyword">fi</span>
+    ;;
+
+    *)
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Usage: /etc/init.d/\$NAME {start|stop|status}&quot;</span> &gt;&amp;2
+    <span class="hljs-built_in">exit</span> 1
+    ;;
+<span class="hljs-keyword">esac</span>
+
+<span class="hljs-built_in">exit</span> 0
+</code></pre>
+<ul>
+<li>Arranque del programa<pre><code class="lang-bash">chmod +x /etc/init.d/btsync
+update-rc.d btsync defaults
+</code></pre>
+</li>
+</ul>
+<h2 id="actualización-del-bittorrent-sync">Actualización del Bittorrent Sync</h2>
+<p>Para actualiar el programa me he creado el siguiente script, este se encuentra dentro de <strong>/home/linaro/Downloads/</strong>. El mismo script se encarga de descargar, extraer, mover el ejecutable y reiniciar el servicio.<br>El script es el siguiente:</p>
+<pre><code class="lang-bash"><span class="hljs-meta">#!/bin/bash</span>
+
+rm -Rf btsync
+mkdir btsync
+
+wget http://download-new.utorrent.com/endpoint/btsync/os/linux-arm/track/stable
+
+mv stable btsync_arm.tar.gz
+tar zxvf btsync_arm.tar.gz -C btsync
+
+service btsync stop
+
+cp ./btsync/btsync /usr/<span class="hljs-built_in">local</span>/bin/
+
+service btsync start
+</code></pre>
+<h1 id="información-obtenida-de">Información obtenida de:</h1>
+<p><a href="http://docs.cubieboard.org/tutorials/ct1/installation/install_lubuntu_desktop_server_to_sd_card" target="_blank">Instalación del linux en la SD</a></p>
+<p><a href="https://www.imai-solutions.com/cubieboard-lubuntu" target="_blank">Configuración del linux</a></p>
+<p><a href="http://quadfinity.blogspot.com.es/2013/11/Install-BitTorrent-Sync-on-Cubieboard-A10.html" target="_blank">Configuración del bittorrent sync</a></p>
+<p><a href="https://help.ubuntu.com/community/Fstab" target="_blank">Fstab</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.html" class="navigation navigation-prev " aria-label="Previous page: Líneas mínimas a añadir al código del Industruino para usar las librerías m2tklib">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.html" class="navigation navigation-next " aria-label="Next page: Información sobre temperatura y discos duros en la cubietruck (cubieboard 3)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Pasos seguidos para crear un sistema de backup online usando el BitTorrent y una Cubietruck (Cubieboard 3)","level":"1.6.2","depth":2,"next":{"title":"Información sobre temperatura y discos duros en la cubietruck (cubieboard 3)","level":"1.6.3","depth":2,"path":"2014/informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.md","ref":"2014/informacion_sobre_temperatura_y_discos_duros_en_la_cubietruck_cubieboard_3.md","articles":[]},"previous":{"title":"Líneas mínimas a añadir al código del Industruino para usar las librerías m2tklib","level":"1.6.1","depth":2,"path":"2014/lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.md","ref":"2014/lineas_minimas_a_anadir_al_codigo_del_industruino_para_usar_las_librerias_m2tklib.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Juan Salvador Aleixandre Talens","pdf":{"pageBreaksBefore":"/","toc":true,"embedFonts":false,"paperSize":"a4","margin":{"right":62,"left":62,"top":56,"bottom":56},"fontSize":12,"fontFamily":"Arial","chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blog Cosillas de Juansal","language":"es","links":{"sidebar":{"Cosillas de Juansal - Blog":"http://blog.juansal.com"}},"gitbook":"*"},"file":{"path":"2014/pasos_seguidos_para_crear_un_sistema_de_backup_online_usando_el_bittorrent_y_una_cubietruck_cubieboard_3.md","mtime":"2021-05-03T23:24:58.257Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-05-03T23:25:17.122Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
