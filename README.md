@@ -8,4 +8,3 @@ Las entradas del blog estarán agrupadas por años y ordenadas por fecha de intr
 
 Además de las entradas del blog introduciré el esto de páginas del blog en un capítulo llamado secciones adicionales.
 
-
